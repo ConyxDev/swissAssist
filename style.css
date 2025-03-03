@@ -1,0 +1,119 @@
+/*
+Theme Name: SwissAssist
+Theme URI: https://www.swissassist.ch/
+Author: Votre Nom
+Author URI: https://www.swissassist.ch/
+Description: Un thème WordPress pour assistante administrative indépendante à Genève
+Version: 1.0.0
+Requires at least: 5.3
+Tested up to: 6.0
+Requires PHP: 7.3
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: swissassist
+Tags: responsive, business, professional, services, administrative, swiss, geneve
+*/
+
+/* Ce fichier est principalement utilisé pour les informations du thème.
+   Les styles principaux sont dans le dossier assets/css/ */
+
+/* Styles de base */
+:root {
+    --primary-color: #418fa4; 
+    --secondary-color: #f18068;
+    --text-color: #333333;
+    --text-color-secondary: #ffffff;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+    --border-color: #dee2e6;
+    --card-shadow: 0 4px 6px rgba(66, 24, 179, 0.1);
+}
+
+body {
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mona Sans', sans-serif;
+    color: #418fa4;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #f18068;
+    text-decoration: underline;
+}
+
+/* Styles de base pour WordPress */
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.skip-link {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    left: -9999em;
+    outline: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-decoration: none;
+    top: -9999em;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    clip: auto;
+    height: auto;
+    left: 6px;
+    top: 7px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* Styles pour accessibility */
+*:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}

@@ -1,0 +1,189 @@
+/**
+ * Styles responsives du thème SwissAssist
+ */
+
+/* Grand écran */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Écrans moyens (tablettes, écrans plus petits) */
+@media (max-width: 991px) {
+    /* Header */
+    .site-header {
+        padding: 10px 0;
+    }
+    
+    .custom-logo {
+        max-height: 60px;
+    }
+    
+    /* Navigation */
+    .menu-toggle {
+        display: block;
+    }
+    
+    .primary-menu-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+    
+    .primary-menu-container.toggled {
+        display: block;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+    }
+    
+    .main-navigation li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* Sections */
+    section {
+        padding: 50px 0;
+    }
+    
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 32px;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+    
+    .service-card, 
+    .advantage-card, 
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Petits écrans (mobile) */
+@media (max-width: 767px) {
+    /* Header */
+    .site-title {
+        font-size: 20px;
+    }
+    
+    .custom-logo {
+        max-height: 50px;
+    }
+    
+    /* Sections */
+    section {
+        padding: 40px 0;
+    }
+    
+    section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-section {
+        padding: 50px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    
+    .hero-section .subtitle {
+        font-size: 16px;
+    }
+    
+    .service-icon,
+    .advantage-icon {
+        font-size: 30px;
+    }
+    
+    .cta-button {
+        display: block;
+        width: 100%;
+    }
+    
+    /* Footer */
+    .site-footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-info,
+    .footer-links,
+    .footer-contact {
+        margin-bottom: 30px;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 575px) {
+    .hero-section h1 {
+        font-size: 24px;
+    }
+    
+    .highlight {
+        font-size: 18px;
+    }
+    
+    .value-props li, 
+    .credentials li {
+        font-size: 15px;
+    }
+    
+    .service-card,
+    .advantage-card,
+    .testimonial-card,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .custom-service {
+        font-size: 16px;
+    }
+    
+    .expertise {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section.video-background {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-section.video-background h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section.video-background .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Pour assurer que la vidéo fonctionne correctement sur iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+    .video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
