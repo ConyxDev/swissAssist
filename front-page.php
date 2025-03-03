@@ -14,7 +14,7 @@ get_header();
     <!-- Conteneur vidéo en arrière-plan -->
     <div class="video-container">
         <video autoplay muted loop playsinline id="hero-video">
-            <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/videoHeader.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/videoHeader2.mp4" type="video/mp4">
             <!-- Vous pouvez ajouter d'autres formats pour une meilleure compatibilité -->
             <!-- <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/votre-video.webm" type="video/webm"> -->
         </video>
@@ -28,9 +28,9 @@ get_header();
                 <p class="subtitle">Une secrétaire expérimentée au service de votre entreprise, sans contrainte d'embauche. Flexibilité – Professionnalisme – Réactivité</p>
                 
                 <ul class="value-props">
-                    <li><span class="check-icon">✔</span> Vous êtes un entrepreneur, une PME ou un professionnel libéral et vous manquez de temps pour gérer vos tâches administratives ?</li>
-                    <li><span class="check-icon">✔</span> Vous cherchez une assistante de confiance, compétente et flexible, sans les contraintes d'un contrat de travail ?</li>
-                    <li><span class="check-icon">✔</span> Vous souhaitez optimiser votre gestion quotidienne et vous concentrer sur votre cœur de métier ?</li>
+                    <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous êtes un entrepreneur, une PME ou un professionnel libéral et vous manquez de temps pour gérer vos tâches administratives ?</li>
+                    <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous cherchez une assistante de confiance, compétente et flexible, sans les contraintes d'un contrat de travail ?</li>
+                    <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous souhaitez optimiser votre gestion quotidienne et vous concentrer sur votre cœur de métier ?</li>
                 </ul>
                 
                 <p>Je vous propose des services de secrétariat externalisé adaptés à vos besoins, sans engagement et à la carte.</p>
@@ -191,7 +191,7 @@ get_header();
                         <blockquote>
                             "Grâce à son efficacité et son professionnalisme, j'ai pu déléguer toute ma gestion administrative et me concentrer sur mon entreprise."
                         </blockquote>
-                        <div class="testimonial-author">👉 Jean Dupont, fondateur de Startup Genève</div>
+                        <div class="testimonial-author">👉 David.G, fondateur de "Infirmier à domicile" à Genève</div>
                     </div>
                 </div>
                 

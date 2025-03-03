@@ -7,22 +7,28 @@
 ------------------- */
 .site-header {
     background-color: #418fa4;
-    color: var(--text-color-secondary);
+    color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
 }
-
+.logo-site {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
 .site-branding {
     display: flex;
     align-items: center;
+    align-content: center;
+
 }
 
 .site-title {
-    font-size: 24px;
-    color: var(--text-color-secondary);
+    font-size: 26px;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -57,19 +63,19 @@
 }
 
 .main-navigation li {
-    margin-left: 20px;
+    margin-left: 24px;
     position: relative;
 }
 
 .main-navigation a {
-    color: var(--text-color-secondary);
+    color: #ffffff;
     font-weight: 500;
     padding: 10px 0;
     display: block;
 }
 
 .main-navigation a:hover {
-    color: var(--secondary-color);
+    color: #f18068;
     text-decoration: none;
 }
 
@@ -85,7 +91,7 @@
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: #418fa4;
     position: relative;
     transition: background-color 0.3s;
 }
@@ -96,7 +102,7 @@
     position: absolute;
     width: 25px;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: #418fa4;
     transition: transform 0.3s;
 }
 
@@ -146,7 +152,7 @@ section h2:after {
 
 .hero-section .subtitle {
     font-size: 18px;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 30px;
 }
 
@@ -162,9 +168,10 @@ section h2:after {
 }
 
 .check-icon {
-    color: var(--secondary-color);
+    color: #f18068;
     margin-right: 10px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .highlight {
@@ -193,7 +200,7 @@ section h2:after {
     position: relative;
     overflow: hidden;
     padding: 120px 0 80px;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* Conteneur vidéo */
@@ -241,11 +248,12 @@ section h2:after {
 .hero-section.video-background h1,
 .hero-section.video-background p,
 .hero-section.video-background ul {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
 }
 
 .hero-section.video-background h1 {
-    color: #fff;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -285,7 +293,7 @@ section h2:after {
 .service-card h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: #418fa4;
 }
 
 .service-card ul {
@@ -304,11 +312,12 @@ section h2:after {
 
 /* Advantages Section */
 .advantages-section {
-    background-color: var(--light-bg);
+    background-color: #f9f9f9;
 }
 
 .advantage-card {
     background-color: #fff;
+    transition: transform 0.3s ease;
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     padding: 25px;
@@ -317,9 +326,13 @@ section h2:after {
     text-align: center;
 }
 
+.advantage-card:hover {
+    transform: translateY(-10px);
+}
+
 .advantage-icon {
     font-size: 32px;
-    color: var(--secondary-color);
+    color: #418fa4;
     margin-bottom: 15px;
 }
 
@@ -367,7 +380,7 @@ section h2:after {
 
 /* Contact Section */
 .contact-section {
-    background-color: var(--light-bg);
+    background-color: #f9f9f9;
 }
 
 .contact-info {
@@ -380,7 +393,7 @@ section h2:after {
 
 .contact-icon {
     margin-right: 10px;
-    color: var(--primary-color);
+    color: #418fa4;
 }
 
 .contact-form {
@@ -398,7 +411,7 @@ section h2:after {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #418fa4;
     border-radius: 4px;
     font-size: 15px;
 }
@@ -412,7 +425,7 @@ section h2:after {
     display: inline-block;
     padding: 12px 25px;
     background-color: #418fa4;
-    color: #fff;
+    color: #ffffff;
     font-weight: 600;
     text-align: center;
     border-radius: 50px;
@@ -445,12 +458,12 @@ section h2:after {
 ------------------- */
 .site-footer {
     background-color: #418fa4;
-    color: #fff;
+    color: #ffffff;
     padding: 50px 0 20px;
 }
 
 .site-footer h3 {
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 20px;
     font-size: 20px;
 }
@@ -479,7 +492,7 @@ section h2:after {
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -494,7 +507,7 @@ section h2:after {
     line-height: 40px;
     text-align: center;
     background-color: #444;
-    color: #fff;
+    color: #ffffff;
     border-radius: 50%;
     margin-right: 10px;
     transition: all 0.3s ease;
@@ -503,7 +516,7 @@ section h2:after {
 }
 
 .social-icon:hover {
-    background-color: var(--primary-color);
+    background-color: #418fa4;
     transform: translateY(-3px);
 }
 

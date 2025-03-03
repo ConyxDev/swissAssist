@@ -30,6 +30,7 @@
                         else :
                             ?>
                             <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/pictures/logo1.svg" alt="Logo de SwissAssist" class="logo-site">
                             <?php
                             $swissassist_description = get_bloginfo( 'description', 'display' );
                             if ( $swissassist_description || is_customize_preview() ) :

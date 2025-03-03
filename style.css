@@ -21,6 +21,7 @@ Tags: responsive, business, professional, services, administrative, swiss, genev
 :root {
     --primary-color: #418fa4; 
     --secondary-color: #f18068;
+    --tertiary-color: #ffffff;  
     --text-color: #333333;
     --text-color-secondary: #ffffff;
     --light-bg: #f8f9fa;
@@ -33,7 +34,7 @@ body {
     font-family: 'Mona Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--text-color);
+    color: #333333;
     margin: 0;
     padding: 0;
 }
@@ -46,14 +47,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--text-color-secondary);
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 a:hover {
     color: #f18068;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Styles de base pour WordPress */
@@ -91,8 +92,8 @@ a:hover {
 }
 
 .skip-link {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #418fa4;
+    color: #f18068;
     font-weight: 700;
     left: -9999em;
     outline: none;
@@ -114,6 +115,472 @@ a:hover {
 
 /* Styles pour accessibility */
 *:focus-visible {
-    outline: 3px solid var(--primary-color);
+    outline: 3px solid #418fa4;
     outline-offset: 2px;
+}
+
+/**
+ * Styles spécifiques pour la page Services
+ * À ajouter à votre fichier main.css
+ */
+
+/* Styles pour l'en-tête de la page Services */
+.page-template-page-services .hero-section {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+}
+
+.page-template-page-services .hero-section h1 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-template-page-services .subtitle-services {
+    color: #418fa4;
+    font-size: 18px;
+}
+
+.highlight-dot {
+    color: #f18068;
+    margin-right: 8px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.highlight-dot i {
+    font-size: 12px;
+}
+
+/* Style pour la section "Pourquoi externaliser" */
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+/* Style pour les credentials plus grands */
+.large-credentials {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.large-credentials li {
+    margin-bottom: 20px;
+    font-size: 17px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.large-credentials .check-icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #f18068;
+    font-size: 22px;
+}
+
+/* Section de contact améliorée */
+.cta-block {
+    border-left: 4px solid #f18068;
+    background-color: rgba(65, 143, 164, 0.05) !important;
+}
+
+.cta-block h4 {
+    color: #418fa4;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Responsive pour la page Services */
+@media (max-width: 768px) {
+    .page-template-page-services .hero-section h1 {
+        font-size: 28px;
+    }
+    
+    .large-credentials li {
+        font-size: 16px;
+        padding-left: 30px;
+    }
+    
+    .large-credentials .check-icon {
+        font-size: 20px;
+    }
+    
+    .cta-block {
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-template-page-services .hero-section h1 {
+        font-size: 24px;
+    }
+    
+    .page-template-page-services .subtitle-services {
+        color: #418fa4;
+        font-size: 16px;
+    }
+    
+    .large-credentials li {
+        font-size: 15px;
+        padding-left: 28px;
+        margin-bottom: 15px;
+    }
+}
+
+/* CSS pour le fond d'image avec opacité */
+
+/* Hero Section avec image de fond */
+.hero-section.image-background {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    color: #fff;
+}
+
+/* Conteneur d'image */
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Styles de l'image pour couvrir tout l'espace */
+.image-container .background-image {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Overlay pour assurer la lisibilité du texte - même opacité que pour la vidéo */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur noire avec 50% d'opacité, identique à la vidéo */
+    z-index: 1;
+}
+
+/* Assurer que le contenu est au-dessus de l'image */
+.hero-section.image-background .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Styles pour le texte sur fond d'image */
+.hero-section.image-background h1,
+.hero-section.image-background p,
+.hero-section.image-background .subtitle {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.hero-section.image-background h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section.image-background .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+    .hero-section.image-background {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-section.image-background h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section.image-background .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+
+/**
+ * Styles spécifiques pour la page À propos
+ * À ajouter à votre fichier main.css
+ */
+
+/* Styles communs pour l'image de fond (identique à la page services) */
+.hero-section.image-background {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    color: #fff;
+    height: 500px;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.image-container .background-image {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section.image-background .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section.image-background h1,
+.hero-section.image-background p,
+.hero-section.image-background .subtitle {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.hero-section.image-background h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section.image-background .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+/* Styles spécifiques à la page À propos */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-content {
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content strong {
+    color: #418fa4;
+}
+
+.about-image {
+    position: relative;
+    padding: 20px;
+}
+
+.about-image img {
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.location {
+    font-style: italic;
+    margin-top: 30px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(65, 143, 164, 0.1);
+    border-radius: 30px;
+}
+
+.location i {
+    color: #418fa4;
+    margin-right: 10px;
+}
+
+/* Section d'expertise */
+.expertise-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.expertise-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+}
+
+.expertise-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #f18068;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background-color: rgba(65, 143, 164, 0.1);
+    border-radius: 50%;
+}
+
+.expertise-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #418fa4;
+}
+
+.expertise-tagline {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f18068;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.expertise-tagline i {
+    margin-right: 10px;
+}
+
+/* Section valeurs */
+.values-section {
+    padding: 80px 0;
+}
+
+.values-intro {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.values-list {
+    margin: 40px 0;
+}
+
+.value-item {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 24px;
+    color: #f18068;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.value-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #418fa4;
+}
+
+.value-content p {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-image {
+        margin-top: 30px;
+    }
+    
+    .value-item {
+        padding: 20px;
+    }
+    
+    .expertise-card {
+        margin-bottom: 20px;
+    }
+    
+    .location {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .expertise-tagline {
+        font-size: 18px;
+    }
+    
+    .hero-section.image-background h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section.image-background {
+        padding: 80px 0 50px;
+    }
+    
+    .hero-section.image-background h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section.image-background .subtitle {
+        font-size: 1rem;
+    }
+    
+    .values-intro {
+        font-size: 16px;
+    }
+    
+    .value-item {
+        flex-direction: column;
+    }
+    
+    .value-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
 }
