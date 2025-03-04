@@ -5,46 +5,142 @@
 /* -----------------
     HEADER STYLES
 ------------------- */
+/**
+ * Styles pour le header modernisé
+ */
+
+/* Structure du header à deux niveaux */
 .site-header {
-    background-color: #418fa4;
-    color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    position: relative;
+}
+
+
+.header-main {
+    background-color: #ffffff;
     padding: 15px 0;
-    position: sticky;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: fixed; /* Au lieu de sticky */
     top: 0;
-    z-index: 100;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
-.logo-site {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+
+/* Classe à ajouter via JavaScript lors du scroll */
+.header-main.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Header top - barre d'informations */
+.header-top {
+    background-color: rgba(65, 143, 164, 0.9);
+    padding: 8px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.header-info-item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-info-item i {
+    margin-right: 7px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+.header-info-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header-info-item a:hover {
+    color: #f18068;
+}
+
+.header-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon-small {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-radius: 50%;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+.social-icon-small:hover {
+    background-color: #f18068;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Header principal */
+
+
+/* Logo et nom du site */
 .site-branding {
     display: flex;
     align-items: center;
-    align-content: center;
+}
 
+.logo-wrapper {
+    margin-right: 15px;
+}
+
+.logo-site {
+    max-height: 50px;
+    width: auto;
+    transition: all 0.3s ease;
 }
 
 .site-title {
-    font-size: 26px;
-    color: #ffffff;
+    font-size: 20px;
     margin: 0;
+    line-height: 1.2;
 }
 
 .site-title a {
+    color: #418fa4;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .site-description {
-    margin: 5px 0 0;
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0;
     color: #666;
 }
 
-.custom-logo {
-    max-height: 80px;
-    width: auto;
+.title-desc {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation principale */
@@ -52,66 +148,147 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100%;
 }
 
-.main-navigation ul {
+.nav-menu {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.main-navigation li {
-    margin-left: 24px;
+.nav-menu li {
+    margin: 0 0 0 5px;
     position: relative;
 }
 
-.main-navigation a {
-    color: #ffffff;
+.nav-menu li a {
+    color: #333;
     font-weight: 500;
-    padding: 10px 0;
+    padding: 10px 15px;
     display: block;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
-.main-navigation a:hover {
+.nav-menu li a:hover,
+.nav-menu li.current-menu-item a {
+    color: #f18068;
+    background-color: rgba(65, 143, 164, 0.05);
+}
+
+/* Bouton CTA dans le header */
+.header-cta {
+    margin-left: 20px;
+}
+
+.btn-header-cta {
+    background-color: #f18068;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #f18068;
+}
+
+.btn-header-cta:hover {
+    background-color: transparent;
     color: #f18068;
     text-decoration: none;
+    transform: translateY(-2px);
 }
 
+/* Menu toggle pour mobile */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
+    color: #f18068;
+    font-size: 22px;
     cursor: pointer;
     padding: 10px;
-}
-
-.menu-icon {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #418fa4;
+    margin-right: 15px;
     position: relative;
-    transition: background-color 0.3s;
+    z-index: 999;
 }
 
-.menu-icon:before,
-.menu-icon:after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #418fa4;
-    transition: transform 0.3s;
+/* Responsive */
+@media (max-width: 991px) {
+    .header-top {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .primary-menu-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.97);
+        z-index: 998;
+        padding: 80px 20px 40px;
+        overflow-y: auto;
+    }
+    
+    .primary-menu-container.active {
+        display: block;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .nav-menu li {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+    
+    .nav-menu li a {
+        padding: 12px 15px;
+        font-size: 18px;
+    }
+    
+    .header-cta {
+        margin: 20px 0 0;
+        text-align: center;
+    }
+    
+    .btn-header-cta {
+        display: block;
+        width: 100%;
+        padding: 15px;
+    }
 }
 
-.menu-icon:before {
-    top: -8px;
-}
-
-.menu-icon:after {
-    bottom: -8px;
+@media (max-width: 767px) {
+    .site-branding {
+        max-width: 200px;
+    }
+    
+    .logo-site {
+        max-height: 40px;
+    }
+    
+    .site-title {
+        font-size: 16px;
+    }
+    
+    .site-description {
+        font-size: 11px;
+    }
 }
 
 /* -----------------

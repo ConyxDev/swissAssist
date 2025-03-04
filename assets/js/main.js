@@ -15,6 +15,14 @@
             $('body').toggleClass('menu-open');
         });
 
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 50) {
+                $('.header-main').addClass('scrolled');
+            } else {
+                $('.header-main').removeClass('scrolled');
+            }
+        });
+
         // Smooth Scrolling for Anchor Links
         $('a[href*="#"]:not([href="#"])').on('click', function() {
             if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
