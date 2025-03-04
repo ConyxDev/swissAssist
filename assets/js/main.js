@@ -1,5 +1,5 @@
 /**
- * Main JavaScript file for SwissAssist theme
+ * Main JavaScript file for SwissAssist modern theme
  */
 (function($) {
     'use strict';
@@ -11,16 +11,20 @@
         $('.menu-toggle').on('click', function(e) {
             e.preventDefault();
             $(this).toggleClass('active');
-            $('.main-navigation').toggleClass('active');
+            $('.nav-menu').toggleClass('active');
             $('body').toggleClass('menu-open');
         });
 
+        // Header scroll effect
         $(window).on('scroll', function() {
-            if ($(this).scrollTop() > 50) {
+            if ($(this).scrollTop() > 100) {
                 $('.header-main').addClass('scrolled');
             } else {
                 $('.header-main').removeClass('scrolled');
             }
+            
+            // Activate animations when elements come into view
+            activateAnimations();
         });
 
         // Smooth Scrolling for Anchor Links
@@ -29,9 +33,18 @@
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
+                    var offset = $('.header-main').outerHeight() + 20;
+                    
+                    // Close mobile menu if open
+                    if ($('.nav-menu').hasClass('active')) {
+                        $('.menu-toggle').removeClass('active');
+                        $('.nav-menu').removeClass('active');
+                        $('body').removeClass('menu-open');
+                    }
+                    
                     $('html, body').animate({
-                        scrollTop: target.offset().top - 100
-                    }, 1000);
+                        scrollTop: target.offset().top - offset
+                    }, 800, 'easeInOutExpo');
                     return false;
                 }
             }
@@ -50,75 +63,106 @@
         
         backToTopBtn.on('click', function(e) {
             e.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 800);
+            $('html, body').animate({scrollTop: 0}, 800, 'easeInOutExpo');
         });
 
-        // Testimonials Slider
-        if ($('.testimonials-slider').length) {
-            $('.testimonials-slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                arrows: false
+        // Active link state on scroll
+        $(window).on('scroll', function() {
+            var scrollPosition = $(this).scrollTop();
+            
+            // Add offset for header height
+            var offset = $('.header-main').outerHeight() + 20;
+            
+            // Check each section
+            $('section[id]').each(function() {
+                var targetTop = $(this).offset().top - offset;
+                var targetBottom = targetTop + $(this).outerHeight();
+                
+                if (scrollPosition >= targetTop && scrollPosition <= targetBottom) {
+                    $('.nav-menu .menu-item a').removeClass('active');
+                    $('.nav-menu .menu-item a[href="#' + $(this).attr('id') + '"]').addClass('active');
+                }
             });
-        }
-
-        // Services Accordion
-        $('.faq-accordion .accordion-header').on('click', function() {
-            $(this).toggleClass('active');
-            $(this).next('.accordion-content').slideToggle(300);
         });
 
         // Form Validation
-        $('.contact-form').on('submit', function(e) {
+        $('.contact-form form').on('submit', function(e) {
             var formValid = true;
             
-            $(this).find('.required').each(function() {
+            $(this).find('[required]').each(function() {
                 if ($(this).val() === '') {
                     formValid = false;
                     $(this).addClass('error');
+                    $(this).parent().addClass('has-error');
                 } else {
                     $(this).removeClass('error');
+                    $(this).parent().removeClass('has-error');
                 }
             });
             
             if (!formValid) {
                 e.preventDefault();
-                $('.form-error-message').fadeIn();
+                
+                // Smooth scroll to first error
+                var firstError = $('.error:first');
+                if (firstError.length) {
+                    $('html, body').animate({
+                        scrollTop: firstError.offset().top - 100
+                    }, 500);
+                }
+                
+                // Display error message if needed
+                if ($('.form-error-message').length) {
+                    $('.form-error-message').fadeIn();
+                }
             }
         });
 
         // Remove error class on input focus
         $('.contact-form .form-control').on('focus', function() {
             $(this).removeClass('error');
+            $(this).parent().removeClass('has-error');
             $('.form-error-message').fadeOut();
         });
 
-        // Animation on Scroll
-        if ($('.animate-on-scroll').length) {
-            $(window).on('scroll', function() {
-                $('.animate-on-scroll').each(function() {
-                    var elementTop = $(this).offset().top;
-                    var elementHeight = $(this).outerHeight();
-                    var windowHeight = $(window).height();
-                    var scrollY = $(window).scrollTop();
-                    
-                    if (scrollY > (elementTop - windowHeight + elementHeight / 4)) {
-                        $(this).addClass('animated');
-                    }
-                });
-            }).scroll();
+        // Initialize animations
+        activateAnimations();
+        
+        // Handle animations on scroll
+        function activateAnimations() {
+            $('.fade-in').each(function() {
+                var elementTop = $(this).offset().top;
+                var elementHeight = $(this).outerHeight();
+                var windowHeight = $(window).height();
+                var scrollY = $(window).scrollTop();
+                
+                // When element is 20% visible
+                if (scrollY > (elementTop - windowHeight + elementHeight * 0.2)) {
+                    $(this).addClass('animated');
+                }
+            });
+        }
+        
+        // Add easing function if not available
+        if (typeof $.easing.easeInOutExpo !== 'function') {
+            $.easing.easeInOutExpo = function(x, t, b, c, d) {
+                if (t == 0) return b;
+                if (t == d) return b + c;
+                if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+                return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+            };
         }
     });
 
     // Window Load
     $(window).on('load', function() {
-        // Hide Preloader
-        $('.preloader').fadeOut(500);
+        // Hide Preloader if exists
+        if ($('.preloader').length) {
+            $('.preloader').fadeOut(500);
+        }
+        
+        // Trigger scroll to activate animations immediately
+        $(window).scroll();
     });
     
 })(jQuery);

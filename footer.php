@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer
+ * The footer for our modern one-page theme
  *
  * @package SwissAssist
  */
@@ -13,25 +13,24 @@
                     <div class="footer-info">
                         <h3><?php bloginfo( 'name' ); ?></h3>
                         <p>Assistante administrative indépendante à Genève</p>
-                        <p><span class="footer-icon">📍</span> Genève, Suisse</p>
-                        <p><span class="footer-icon">📞</span> <?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?></p>
-                        <p><span class="footer-icon">📩</span> <?php echo antispambot(get_theme_mod('contact_email', 'swissassist@gmail.com')); ?></p>
+                        <p><span class="footer-icon"><i class="fas fa-map-marker-alt"></i></span> Genève, Suisse</p>
+                        <p><span class="footer-icon"><i class="fas fa-phone"></i></span> <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>"><?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?></a></p>
+                        <p><span class="footer-icon"><i class="fas fa-envelope"></i></span> <a href="mailto:<?php echo antispambot(get_theme_mod('contact_email', 'contact@swissassist.ch')); ?>"><?php echo antispambot(get_theme_mod('contact_email', 'contact@swissassist.ch')); ?></a></p>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="footer-links">
-                        <h3>Liens rapides</h3>
-                        <?php
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'footer-menu',
-                                'menu_id'        => 'footer-menu',
-                                'container_class' => 'footer-menu-container',
-                                'depth'          => 1,
-                            )
-                        );
-                        ?>
+                        <h3>Navigation rapide</h3>
+                        <div class="footer-menu-container">
+                            <ul>
+                                <li><a href="#accueil">Accueil</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#avantages">Avantages</a></li>
+                                <li><a href="#temoignages">Témoignages</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
@@ -43,15 +42,21 @@
                         
                         <div class="social-links">
                             <?php if (get_theme_mod('social_linkedin')) : ?>
-                                <a href="<?php echo esc_url(get_theme_mod('social_linkedin')); ?>" target="_blank" class="social-icon linkedin">LinkedIn</a>
+                                <a href="<?php echo esc_url(get_theme_mod('social_linkedin')); ?>" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
                             <?php endif; ?>
                             
                             <?php if (get_theme_mod('social_facebook')) : ?>
-                                <a href="<?php echo esc_url(get_theme_mod('social_facebook')); ?>" target="_blank" class="social-icon facebook">Facebook</a>
+                                <a href="<?php echo esc_url(get_theme_mod('social_facebook')); ?>" target="_blank" class="social-icon" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
                             <?php endif; ?>
                             
                             <?php if (get_theme_mod('social_instagram')) : ?>
-                                <a href="<?php echo esc_url(get_theme_mod('social_instagram')); ?>" target="_blank" class="social-icon instagram">Instagram</a>
+                                <a href="<?php echo esc_url(get_theme_mod('social_instagram')); ?>" target="_blank" class="social-icon" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -61,7 +66,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="site-info">
-                        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Tous droits réservés.</p>
+                        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
                     </div><!-- .site-info -->
                 </div>
             </div>
