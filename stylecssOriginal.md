@@ -1580,10 +1580,7 @@ section {
     text-align: center;
 }
 
-.btn-primary {
-    background: var(--primary-color);
-    color: var(--white);
-}
+
 
 .btn-primary:hover {
     background: var(--primary-dark);
@@ -1829,13 +1826,6 @@ section {
     z-index: 2;
 }
 
-.hero-section h1 {
-    color: var(--white);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    max-width: 800px;
-}
-
 .subtitle {
     font-size: 1.375rem;
     color: rgba(255, 255, 255, 0.9);
@@ -1916,27 +1906,7 @@ section {
     text-transform: uppercase;
 }
 
-.highlight {
-    font-weight: 700;
-    color: var(--white);
-    font-size: 1.2rem;
-    background-color: var(--highlight-bg);
-    padding: 18px 25px;
-    border-radius: var(--border-radius);
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    box-shadow: var(--shadow-md);
-    transform: rotate(-1deg);
-}
 
-.location {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--white);
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-}
 
 .pin-icon {
     color: var(--accent-color-alt);
@@ -1965,15 +1935,6 @@ section {
     margin-bottom: 0;
 }
 
-.hero-image {
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-xl);
-    transform: rotate(2deg);
-    position: relative;
-    z-index: 2;
-}
 
 .hero-image img {
     border-radius: calc(var(--border-radius) - 5px);
@@ -2169,10 +2130,6 @@ section {
     transform: translate(-50%, 50%);
 }
 
-.advantages-section h2 {
-    color: var(--white);
-}
-
 .advantages-section h2::after {
     background: linear-gradient(90deg, var(--accent-color-alt), var(--accent-color));
 }
@@ -2202,10 +2159,6 @@ section {
     display: inline-block;
 }
 
-.advantage-card h3 {
-    margin-bottom: 15px;
-    color: var(--white);
-}
 
 .advantage-card p {
     color: rgba(255, 255, 255, 0.8);
