@@ -19,7 +19,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'swissassist' ); ?></a>
+    <a id="logo-site" class="skip-link screen-reader-text text-accent-color"><?php esc_html_e( 'Skip to content', 'swissassist' ); ?></a>
 
     <header id="masthead" class="site-header">
         <div class="header-top">
@@ -76,10 +76,7 @@
                                 the_custom_logo();
                             else :
                                 ?>
-                                <div class="logo-wrapper">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/pictures/logo1.svg" alt="Logo de SwissAssist" class="logo-site">
-                                </div>
-                                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                                <h1 id="site-name" class="text-accent-color"><a id="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                             <?php endif; ?>
                         </div><!-- .site-branding -->
                     </div>

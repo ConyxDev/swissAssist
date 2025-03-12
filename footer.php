@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="site-info">
-                        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+                        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Tous droits réservés. | <a class="footer-link" href="#">Mentions légales</a> | <a class="footer-link" href="#">Politique de confidentialité</a></p>
                     </div><!-- .site-info -->
                 </div>
             </div>

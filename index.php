@@ -21,22 +21,29 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <span class="highlight-badge">Assistante Administrative Indépendante</span>
-                    <h1>Libérez votre temps, concentrez-vous sur votre cœur de métier</h1>
-                    <p class="subtitle">Une secrétaire expérimentée au service de votre entreprise, sans contrainte d'embauche. Flexibilité – Professionnalisme – Réactivité</p>
+                    <h1 class="highlight-title">Secrétaire indépendante</h1>
+                    <h2 id="title-description" class="highlight-title text-white">
+                        Services de secrétariat médical et administratif sur Genève et à distance.
+                    </h2>
+                        <h3 id="subtitle-description" class="highlight-title">Une secrétaire expérimentée au service de votre entreprise, 
+                        <br>spécialisée dans le secrétariat médical.
+                        <br>Flexibilité – Professionnalisme – Réactivité
+                        </h3>
+                    
+
                     
                     <ul class="value-props">
                         <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous manquez de temps pour gérer vos tâches administratives ?</li>
-                        <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous cherchez une assistante flexible, sans contrat de travail ?</li>
-                        <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous souhaitez optimiser votre gestion quotidienne ?</li>
+                        <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous cherchez une secrétaire pour une mission temporaire ou un remplacement en sein de votre entreprise ?</li>
+                        <li><span class="check-icon"><i class="fas fa-check"></i></span> Vous souhaitez externaliser votre secrétariat médical ?</li>
                     </ul>
                     
                     <p class="highlight">➜ Confiez-moi vos tâches administratives et concentrez-vous sur l'essentiel !</p>
                     
-                    <p class="location"><i class="fa-solid fa-location-dot pin-icon"></i> Basée à Genève, j'interviens dans toute la Suisse romande et à distance.</p>
+                    <p class="location"><i class="fa-solid fa-location-dot pin-icon"></i> Basée à Genève, j'interviens sur tout le canton de Genève et à distance.</p>
                     
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-gradient btn-lg btn-icon">Réserver un appel découverte <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-gradient btn-lg btn-icon">Réserver un appel <i class="fas fa-arrow-right"></i></a>
                         <a href="#services" class="btn btn-secondary btn-lg">Découvrir mes services</a>
                     </div>
                 </div>
@@ -77,12 +84,13 @@ get_header();
                 
                 <div class="col-md-6 fade-in fade-in-delay-1">
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
-                        <h3>Comptabilité & Facturation</h3>
+                    <div class="service-icon"><i class="fas fa-hospital"></i></div>
+                        <h3>Secrétariat Médical</h3>
                         <ul>
-                            <li>Saisie et suivi des factures clients/fournisseurs</li>
-                            <li>Relance des paiements et gestion des créances</li>
-                            <li>Préparation des déclarations comptables</li>
+                            <li>Transcription et comptes-rendus médicaux</li>
+                            <li>Gestion de la facturation médicale et Tarmed</li>
+                            <li>Prise de rendez-vous patients</li>
+                            <li>Gestion du standard téléphonique</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary btn-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -105,12 +113,11 @@ get_header();
                 
                 <div class="col-md-6 fade-in fade-in-delay-3">
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-hospital"></i></div>
-                        <h3>Secrétariat Médical</h3>
+                        <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+                        <h3>Comptabilité & Facturation</h3>
                         <ul>
-                            <li>Transcription et comptes-rendus médicaux</li>
-                            <li>Gestion de la facturation médicale et Tarmed</li>
-                            <li>Prise de rendez-vous patients</li>
+                            <li>Saisie et suivi des factures clients/fournisseurs</li>
+                            <li>Relance des paiements et gestion des créances</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary btn-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
                     </div>
