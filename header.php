@@ -2,7 +2,7 @@
 /**
  * The header for our modern one-page theme
  *
- * @package SwissAssist
+ * @package helvassist
  */
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <a id="logo-site" class="skip-link screen-reader-text text-accent-color"><?php esc_html_e( 'Skip to content', 'swissassist' ); ?></a>
+    <a id="logo-site" class="skip-link screen-reader-text text-accent-color"><?php esc_html_e( 'Skip to content', 'helvassist' ); ?></a>
 
     <header id="masthead" class="site-header">
         <div class="header-top">
@@ -33,7 +33,7 @@
                             </span>
                             <span class="header-info-item">
                                 <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:<?php echo antispambot(get_theme_mod('contact_email', 'contact@swissassist.ch')); ?>"><?php echo antispambot(get_theme_mod('contact_email', 'contact@swissassist.ch')); ?></a>
+                                <a href="mailto:<?php echo antispambot(get_theme_mod('contact_email', 'contact@helvassist.ch')); ?>"><?php echo antispambot(get_theme_mod('contact_email', 'contact@helvassist.ch')); ?></a>
                             </span>
                             <span class="header-info-item">
                                 <i class="fa-solid fa-location-dot"></i>

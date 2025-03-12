@@ -1,8 +1,8 @@
 <?php
 /**
- * SwissAssist functions and definitions
+ * helvassist functions and definitions
  *
- * @package SwissAssist
+ * @package helvassist
  */
 
 if (!defined('_S_VERSION')) {
@@ -13,11 +13,11 @@ if (!defined('_S_VERSION')) {
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
-function swissassist_setup() {
+function helvassist_setup() {
     /*
      * Make theme available for translation.
      */
-    load_theme_textdomain('swissassist', get_template_directory() . '/languages');
+    load_theme_textdomain('helvassist', get_template_directory() . '/languages');
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
@@ -35,8 +35,8 @@ function swissassist_setup() {
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
-            'menu-1' => esc_html__('Primary', 'swissassist'),
-            'footer-menu' => esc_html__('Footer', 'swissassist'),
+            'menu-1' => esc_html__('Primary', 'helvassist'),
+            'footer-menu' => esc_html__('Footer', 'helvassist'),
         )
     );
 
@@ -73,7 +73,7 @@ function swissassist_setup() {
         )
     );
 }
-add_action('after_setup_theme', 'swissassist_setup');
+add_action('after_setup_theme', 'helvassist_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -82,20 +82,20 @@ add_action('after_setup_theme', 'swissassist_setup');
  *
  * @global int $content_width
  */
-function swissassist_content_width() {
-    $GLOBALS['content_width'] = apply_filters('swissassist_content_width', 1140);
+function helvassist_content_width() {
+    $GLOBALS['content_width'] = apply_filters('helvassist_content_width', 1140);
 }
-add_action('after_setup_theme', 'swissassist_content_width', 0);
+add_action('after_setup_theme', 'helvassist_content_width', 0);
 
 /**
  * Register widget area.
  */
-function swissassist_widgets_init() {
+function helvassist_widgets_init() {
     register_sidebar(
         array(
-            'name'          => esc_html__('Sidebar', 'swissassist'),
+            'name'          => esc_html__('Sidebar', 'helvassist'),
             'id'            => 'sidebar-1',
-            'description'   => esc_html__('Add widgets here.', 'swissassist'),
+            'description'   => esc_html__('Add widgets here.', 'helvassist'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h2 class="widget-title">',
@@ -105,9 +105,9 @@ function swissassist_widgets_init() {
     
     register_sidebar(
         array(
-            'name'          => esc_html__('Footer Widget Area 1', 'swissassist'),
+            'name'          => esc_html__('Footer Widget Area 1', 'helvassist'),
             'id'            => 'footer-1',
-            'description'   => esc_html__('First footer widget area', 'swissassist'),
+            'description'   => esc_html__('First footer widget area', 'helvassist'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h3 class="widget-title">',
@@ -117,9 +117,9 @@ function swissassist_widgets_init() {
     
     register_sidebar(
         array(
-            'name'          => esc_html__('Footer Widget Area 2', 'swissassist'),
+            'name'          => esc_html__('Footer Widget Area 2', 'helvassist'),
             'id'            => 'footer-2',
-            'description'   => esc_html__('Second footer widget area', 'swissassist'),
+            'description'   => esc_html__('Second footer widget area', 'helvassist'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h3 class="widget-title">',
@@ -129,9 +129,9 @@ function swissassist_widgets_init() {
     
     register_sidebar(
         array(
-            'name'          => esc_html__('Footer Widget Area 3', 'swissassist'),
+            'name'          => esc_html__('Footer Widget Area 3', 'helvassist'),
             'id'            => 'footer-3',
-            'description'   => esc_html__('Third footer widget area', 'swissassist'),
+            'description'   => esc_html__('Third footer widget area', 'helvassist'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h3 class="widget-title">',
@@ -139,14 +139,14 @@ function swissassist_widgets_init() {
         )
     );
 }
-add_action('widgets_init', 'swissassist_widgets_init');
+add_action('widgets_init', 'helvassist_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function swissassist_scripts() {
+function helvassist_scripts() {
     // Enqueue Google Fonts
-    wp_enqueue_style('swissassist-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap', array(), null);
+    wp_enqueue_style('helvassist-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap', array(), null);
     
     // Enqueue Font Awesome
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
@@ -158,9 +158,9 @@ function swissassist_scripts() {
     wp_enqueue_style('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1');
     
     // Enqueue theme styles
-    wp_enqueue_style('swissassist-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_enqueue_style('swissassist-main', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION);
-    wp_enqueue_style('swissassist-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION);
+    wp_enqueue_style('helvassist-style', get_stylesheet_uri(), array(), _S_VERSION);
+    wp_enqueue_style('helvassist-main', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION);
+    wp_enqueue_style('helvassist-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION);
     
     // Enqueue jQuery (WordPress bundled version)
     wp_enqueue_script('jquery');
@@ -172,13 +172,13 @@ function swissassist_scripts() {
     wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
     
     // Enqueue theme scripts
-    wp_enqueue_script('swissassist-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), _S_VERSION, true);
+    wp_enqueue_script('helvassist-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), _S_VERSION, true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 }
-add_action('wp_enqueue_scripts', 'swissassist_scripts');
+add_action('wp_enqueue_scripts', 'helvassist_scripts');
 
 /**
  * Custom template tags for this theme.
@@ -193,27 +193,27 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Register Custom Post Type for Services
  */
-function swissassist_register_services_post_type() {
+function helvassist_register_services_post_type() {
     $labels = array(
-        'name'                  => _x('Services', 'Post Type General Name', 'swissassist'),
-        'singular_name'         => _x('Service', 'Post Type Singular Name', 'swissassist'),
-        'menu_name'             => __('Services', 'swissassist'),
-        'name_admin_bar'        => __('Service', 'swissassist'),
-        'archives'              => __('Archives des services', 'swissassist'),
-        'attributes'            => __('Attributs du service', 'swissassist'),
-        'all_items'             => __('Tous les services', 'swissassist'),
-        'add_new_item'          => __('Ajouter un nouveau service', 'swissassist'),
-        'add_new'               => __('Ajouter', 'swissassist'),
-        'new_item'              => __('Nouveau service', 'swissassist'),
-        'edit_item'             => __('Modifier le service', 'swissassist'),
-        'update_item'           => __('Mettre à jour le service', 'swissassist'),
-        'view_item'             => __('Voir le service', 'swissassist'),
-        'view_items'            => __('Voir les services', 'swissassist'),
-        'search_items'          => __('Rechercher un service', 'swissassist'),
+        'name'                  => _x('Services', 'Post Type General Name', 'helvassist'),
+        'singular_name'         => _x('Service', 'Post Type Singular Name', 'helvassist'),
+        'menu_name'             => __('Services', 'helvassist'),
+        'name_admin_bar'        => __('Service', 'helvassist'),
+        'archives'              => __('Archives des services', 'helvassist'),
+        'attributes'            => __('Attributs du service', 'helvassist'),
+        'all_items'             => __('Tous les services', 'helvassist'),
+        'add_new_item'          => __('Ajouter un nouveau service', 'helvassist'),
+        'add_new'               => __('Ajouter', 'helvassist'),
+        'new_item'              => __('Nouveau service', 'helvassist'),
+        'edit_item'             => __('Modifier le service', 'helvassist'),
+        'update_item'           => __('Mettre à jour le service', 'helvassist'),
+        'view_item'             => __('Voir le service', 'helvassist'),
+        'view_items'            => __('Voir les services', 'helvassist'),
+        'search_items'          => __('Rechercher un service', 'helvassist'),
     );
     $args = array(
-        'label'                 => __('Service', 'swissassist'),
-        'description'           => __('Services proposés', 'swissassist'),
+        'label'                 => __('Service', 'helvassist'),
+        'description'           => __('Services proposés', 'helvassist'),
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'excerpt'),
         'hierarchical'          => false,
@@ -233,31 +233,31 @@ function swissassist_register_services_post_type() {
     );
     register_post_type('service', $args);
 }
-add_action('init', 'swissassist_register_services_post_type');
+add_action('init', 'helvassist_register_services_post_type');
 
 /**
  * Register Custom Post Type for Testimonials
  */
-function swissassist_register_testimonials_post_type() {
+function helvassist_register_testimonials_post_type() {
     $labels = array(
-        'name'                  => _x('Témoignages', 'Post Type General Name', 'swissassist'),
-        'singular_name'         => _x('Témoignage', 'Post Type Singular Name', 'swissassist'),
-        'menu_name'             => __('Témoignages', 'swissassist'),
-        'name_admin_bar'        => __('Témoignage', 'swissassist'),
-        'archives'              => __('Archives des témoignages', 'swissassist'),
-        'all_items'             => __('Tous les témoignages', 'swissassist'),
-        'add_new_item'          => __('Ajouter un nouveau témoignage', 'swissassist'),
-        'add_new'               => __('Ajouter', 'swissassist'),
-        'new_item'              => __('Nouveau témoignage', 'swissassist'),
-        'edit_item'             => __('Modifier le témoignage', 'swissassist'),
-        'update_item'           => __('Mettre à jour le témoignage', 'swissassist'),
-        'view_item'             => __('Voir le témoignage', 'swissassist'),
-        'view_items'            => __('Voir les témoignages', 'swissassist'),
-        'search_items'          => __('Rechercher un témoignage', 'swissassist'),
+        'name'                  => _x('Témoignages', 'Post Type General Name', 'helvassist'),
+        'singular_name'         => _x('Témoignage', 'Post Type Singular Name', 'helvassist'),
+        'menu_name'             => __('Témoignages', 'helvassist'),
+        'name_admin_bar'        => __('Témoignage', 'helvassist'),
+        'archives'              => __('Archives des témoignages', 'helvassist'),
+        'all_items'             => __('Tous les témoignages', 'helvassist'),
+        'add_new_item'          => __('Ajouter un nouveau témoignage', 'helvassist'),
+        'add_new'               => __('Ajouter', 'helvassist'),
+        'new_item'              => __('Nouveau témoignage', 'helvassist'),
+        'edit_item'             => __('Modifier le témoignage', 'helvassist'),
+        'update_item'           => __('Mettre à jour le témoignage', 'helvassist'),
+        'view_item'             => __('Voir le témoignage', 'helvassist'),
+        'view_items'            => __('Voir les témoignages', 'helvassist'),
+        'search_items'          => __('Rechercher un témoignage', 'helvassist'),
     );
     $args = array(
-        'label'                 => __('Témoignage', 'swissassist'),
-        'description'           => __('Témoignages clients', 'swissassist'),
+        'label'                 => __('Témoignage', 'helvassist'),
+        'description'           => __('Témoignages clients', 'helvassist'),
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail'),
         'hierarchical'          => false,
@@ -277,43 +277,43 @@ function swissassist_register_testimonials_post_type() {
     );
     register_post_type('testimonial', $args);
 }
-add_action('init', 'swissassist_register_testimonials_post_type');
+add_action('init', 'helvassist_register_testimonials_post_type');
 
 /**
  * Custom excerpt length
  */
-function swissassist_custom_excerpt_length($length) {
+function helvassist_custom_excerpt_length($length) {
     return 25;
 }
-add_filter('excerpt_length', 'swissassist_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'helvassist_custom_excerpt_length', 999);
 
 /**
  * Custom excerpt more
  */
-function swissassist_custom_excerpt_more($more) {
+function helvassist_custom_excerpt_more($more) {
     return '...';
 }
-add_filter('excerpt_more', 'swissassist_custom_excerpt_more');
+add_filter('excerpt_more', 'helvassist_custom_excerpt_more');
 
 /**
  * Add custom meta box for testimonials
  */
-function swissassist_add_testimonial_meta_boxes() {
+function helvassist_add_testimonial_meta_boxes() {
     add_meta_box(
         'testimonial_details',
-        __('Détails du témoignage', 'swissassist'),
-        'swissassist_testimonial_details_callback',
+        __('Détails du témoignage', 'helvassist'),
+        'helvassist_testimonial_details_callback',
         'testimonial',
         'normal',
         'high'
     );
 }
-add_action('add_meta_boxes', 'swissassist_add_testimonial_meta_boxes');
+add_action('add_meta_boxes', 'helvassist_add_testimonial_meta_boxes');
 
 /**
  * Testimonial meta box callback
  */
-function swissassist_testimonial_details_callback($post) {
+function helvassist_testimonial_details_callback($post) {
     wp_nonce_field(basename(__FILE__), 'testimonial_details_nonce');
     
     $client_name = get_post_meta($post->ID, 'client_name', true);
@@ -322,15 +322,15 @@ function swissassist_testimonial_details_callback($post) {
     
     ?>
     <p>
-        <label for="client_name"><?php _e('Nom du client:', 'swissassist'); ?></label>
+        <label for="client_name"><?php _e('Nom du client:', 'helvassist'); ?></label>
         <input type="text" id="client_name" name="client_name" value="<?php echo esc_attr($client_name); ?>" class="widefat">
     </p>
     <p>
-        <label for="client_position"><?php _e('Fonction du client:', 'swissassist'); ?></label>
+        <label for="client_position"><?php _e('Fonction du client:', 'helvassist'); ?></label>
         <input type="text" id="client_position" name="client_position" value="<?php echo esc_attr($client_position); ?>" class="widefat">
     </p>
     <p>
-        <label for="client_company"><?php _e('Entreprise du client:', 'swissassist'); ?></label>
+        <label for="client_company"><?php _e('Entreprise du client:', 'helvassist'); ?></label>
         <input type="text" id="client_company" name="client_company" value="<?php echo esc_attr($client_company); ?>" class="widefat">
     </p>
     <?php
@@ -339,7 +339,7 @@ function swissassist_testimonial_details_callback($post) {
 /**
  * Save testimonial meta box data
  */
-function swissassist_save_testimonial_meta($post_id) {
+function helvassist_save_testimonial_meta($post_id) {
     
     // Check if our nonce is set and verify it
     if (!isset($_POST['testimonial_details_nonce']) || !wp_verify_nonce($_POST['testimonial_details_nonce'], basename(__FILE__))) {
@@ -383,12 +383,12 @@ function swissassist_save_testimonial_meta($post_id) {
         update_post_meta($post_id, 'client_company', sanitize_text_field($new_client_company));
     }
 }
-add_action('save_post', 'swissassist_save_testimonial_meta');
+add_action('save_post', 'helvassist_save_testimonial_meta');
 
 /**
  * Get testimonials for front page
  */
-function swissassist_get_testimonials($count = 5) {
+function helvassist_get_testimonials($count = 5) {
     $args = array(
         'post_type' => 'testimonial',
         'posts_per_page' => $count,
@@ -403,7 +403,7 @@ function swissassist_get_testimonials($count = 5) {
 /**
  * Get services for front page
  */
-function swissassist_get_services($count = 6) {
+function helvassist_get_services($count = 6) {
     $args = array(
         'post_type' => 'service',
         'posts_per_page' => $count,
@@ -418,7 +418,7 @@ function swissassist_get_services($count = 6) {
 /**
  * Pagination function
  */
-function swissassist_pagination() {
+function helvassist_pagination() {
     global $wp_query;
     
     if ($wp_query->max_num_pages <= 1) {
@@ -451,15 +451,15 @@ function swissassist_pagination() {
     }
 }
 
-function swissassist_get_video_background() {
-    $enable_video = get_theme_mod('swissassist_enable_video_background', false);
+function helvassist_get_video_background() {
+    $enable_video = get_theme_mod('helvassist_enable_video_background', false);
     
     if (!$enable_video) {
         return;
     }
     
-    $video_mp4 = get_theme_mod('swissassist_video_mp4', '');
-    $video_webm = get_theme_mod('swissassist_video_webm', '');
+    $video_mp4 = get_theme_mod('helvassist_video_mp4', '');
+    $video_webm = get_theme_mod('helvassist_video_webm', '');
     
     if (empty($video_mp4) && empty($video_webm)) {
         return;

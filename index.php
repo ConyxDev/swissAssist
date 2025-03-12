@@ -2,7 +2,7 @@
 /**
  * The main template file for the modern one-page version
  *
- * @package SwissAssist
+ * @package helvassist
  */
 
 get_header();

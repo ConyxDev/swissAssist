@@ -2,7 +2,7 @@
 /**
  * The footer for our modern one-page theme
  *
- * @package SwissAssist
+ * @package helvassist
  */
 ?>
 
@@ -15,7 +15,7 @@
                         <p>Assistante administrative indépendante à Genève</p>
                         <p><span class="footer-icon"><i class="fas fa-map-marker-alt"></i></span> Genève, Suisse</p>
                         <p><span class="footer-icon"><i class="fas fa-phone"></i></span> <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>"><?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?></a></p>
-                        <p><span class="footer-icon"><i class="fas fa-envelope"></i></span> <a href="mailto:<?php echo antispambot(get_theme_mod('contact_email', 'contact@swissassist.ch')); ?>"><?php echo antispambot(get_theme_mod('contact_email', 'contact@swissassist.ch')); ?></a></p>
+                        <p><span class="footer-icon"><i class="fas fa-envelope"></i></span> <a href="mailto:<?php echo antispambot(get_theme_mod('contact_email', 'contact@helvassist.ch')); ?>"><?php echo antispambot(get_theme_mod('contact_email', 'contact@helvassist.ch')); ?></a></p>
                     </div>
                 </div>
                 
