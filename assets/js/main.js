@@ -280,3 +280,36 @@
     });
 
 })(jQuery);
+
+// Ajouter ce code à la fin de votre fichier main.js ou dans une balise script dans footer.php
+document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour gérer l'effet parallaxe avancé
+    function handleParallax() {
+        const parallaxElements = document.querySelectorAll('.workspace-image, .workspace-image-2');
+        
+        // Ne pas appliquer le parallaxe avancé sur mobile
+        if (window.innerWidth <= 768) return;
+        
+        parallaxElements.forEach(element => {
+            // Calculer la position de défilement
+            const scrollPosition = window.pageYOffset;
+            const elementPosition = element.offsetTop;
+            const distance = scrollPosition - elementPosition;
+            
+            // Calculer la position de parallaxe (ajustez la valeur 0.5 pour modifier la vitesse)
+            const parallaxOffset = distance * 0.3;
+            
+            // Appliquer le décalage uniquement si l'élément est visible
+            if (scrollPosition + window.innerHeight > elementPosition && 
+                scrollPosition < elementPosition + element.offsetHeight) {
+                element.style.backgroundPositionY = `calc(50% + ${parallaxOffset}px)`;
+            }
+        });
+    }
+    
+    // Écouter l'événement de défilement
+    window.addEventListener('scroll', handleParallax);
+    
+    // Initialiser pour la position de départ
+    handleParallax();
+});

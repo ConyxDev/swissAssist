@@ -23,10 +23,10 @@ get_header();
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <div class="hero-content">
-                        <h1 class="hero-title fade-in">Secrétaire Médicale Indépendante</h1>
+                        <h1 class="hero-title fade-in">Secrétaire Médicale à Genève</h1>
                         <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif sur Genève et à distance</h2>
                         
-                        <p class="hero-text fade-in fade-in-delay-2">Une secrétaire expérimentée au service de votre entreprise, spécialisée dans le secrétariat médical. Flexibilité – Professionnalisme – Réactivité</p>
+                        <p class="hero-text fade-in fade-in-delay-2">Une secrétaire expérimentée au service de votre entreprise, spécialisée dans le secrétariat médical.<br> Flexibilité – Professionnalisme – Réactivité</p>
                         
                         <div class="hero-feature-list">
                             <div class="hero-feature-item fade-in fade-in-delay-1">
@@ -35,7 +35,7 @@ get_header();
                             </div>
                             <div class="hero-feature-item fade-in fade-in-delay-2">
                                 <span class="feature-icon"><i class="fas fa-check"></i></span>
-                                <span>Vous cherchez une secrétaire pour une mission temporaire ou un remplacement ?</span>
+                                <span>À la recherche d’une secrétaire expérimentée pour un remplacement ou une mission temporaire ?<br> Optez pour une solution flexible et immédiate pour assurer la continuité de votre activité !</span>
                             </div>
                             <div class="hero-feature-item fade-in fade-in-delay-3">
                                 <span class="feature-icon"><i class="fas fa-check"></i></span>

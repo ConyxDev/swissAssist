@@ -93,8 +93,6 @@
                             <ul id="primary-menu" class="nav-menu">
                                 <li class="menu-item"><a href="#accueil">Accueil</a></li>
                                 <li class="menu-item"><a href="#services">Services</a></li>
-                                <li class="menu-item"><a href="#avantages">Avantages</a></li>
-                                <li class="menu-item"><a href="#temoignages">Témoignages</a></li>
                                 <li class="menu-item"><a href="#tarifs">Tarifs</a></li>
                                 <li class="menu-item"><a href="#apropos">À propos</a></li>
                                 <li class="menu-item"><a href="#faq">FAQ</a></li>
