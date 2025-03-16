@@ -2229,3 +2229,207 @@ textarea.form-control {
         transform: translateY(0);
     }
 }
+
+
+
+
+
+
+/* section à propos */
+/* Styles pour la section À propos avec cartes */
+.about-section {
+    padding: var(--section-spacing) 0;
+    background-color: var(--bg-light);
+}
+
+.about-intro {
+    margin-bottom: 3rem;
+}
+
+/* Carte de profil */
+.about-profile-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    height: 100%;
+}
+
+.profile-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.profile-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.profile-title {
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.profile-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.profile-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--main-lightest);
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.profile-social a:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Cartes de compétences */
+.about-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+.intro-card {
+    border-left: none;
+}
+
+.intro-card::before {
+    display: none;
+}
+
+.about-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--main-lightest);
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-card-content h4 {
+    margin-bottom: 1.25rem;
+    color: var(--main-color);
+    font-size: 1.3rem;
+}
+
+.about-card-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.about-card-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.about-card-list li::before {
+    content: '\f054';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 0.8rem;
+}
+
+/* Styles spécifiques pour les langues */
+.language-label {
+    font-weight: 600;
+}
+
+.language-level {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Styles pour les valeurs */
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.value-tag {
+    background-color: var(--main-lightest);
+    color: var(--main-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.value-tag:hover {
+    background-color: var(--accent-light);
+    color: var(--accent-dark);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-profile-card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        height: 250px;
+    }
+    
+    .about-card {
+        padding: 1.5rem;
+    }
+}
+
+/* 

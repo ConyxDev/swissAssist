@@ -26,7 +26,7 @@ get_header();
                         <h1 class="hero-title fade-in">Secrétaire Médicale à Genève</h1>
                         <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif sur Genève et à distance</h2>
                         
-                        <p class="hero-text fade-in fade-in-delay-2">Une secrétaire expérimentée au service de votre entreprise, spécialisée dans le secrétariat médical.<br> Flexibilité – Professionnalisme – Réactivité</p>
+                        <p class="hero-text fade-in fade-in-delay-2">Une secrétaire expérimentée au service de votre entreprise,<br> spécialisée dans le secrétariat médical.<br><br> Flexibilité – Professionnalisme – Réactivité</p>
                         
                         <div class="hero-feature-list">
                             <div class="hero-feature-item fade-in fade-in-delay-1">
@@ -169,7 +169,7 @@ get_header();
     <!-- Section 3: Avantages -->
     <section id="avantages" class="advantages-section">
         <div class="container">
-            <h2 class="section-title">Les avantages de travailler avec moi</h2>
+            <h2 class="section-title">Mon engagement à vos côtés</h2>
             
             <div class="advantages-row">
                 <div class="advantage-card fade-in">
@@ -241,7 +241,32 @@ get_header();
                         </div>
                     </div>
                 </div>
+
+            
                 
+                <div class="col-md-6">
+                    <div class="testimonial-card fade-in fade-in-delay-1">
+                        <div class="testimonial-quote">
+                            "Un vrai gain de temps et une grande rigueur dans le suivi des tâches. Je recommande vivement !"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-image">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Marie L.</h4>
+                                <p class="testimonial-position">Thérapeute indépendante, Lausanne</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="testimonial-card fade-in fade-in-delay-1">
                         <div class="testimonial-quote">
