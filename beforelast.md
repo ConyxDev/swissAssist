@@ -10,38 +10,39 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: swissassist
 */
 
-/* Variables de couleurs principales - Palette moderne et dynamique */
+/* Variables de couleurs principales - Palette sobre et professionnelle */
 :root {
-    --primary-color: #4361ee;       /* Bleu primaire vif */
-    --primary-light: #7aa5eb;       /* Bleu clair */
-    --primary-dark: #2b3fce;        /* Bleu foncé */
-    --secondary-color: #16213e;     /* Bleu nuit profond */
-    --accent-color: #ff5678;        /* Rose vif - accent */
-    --accent-color-alt: #4cc9f0;    /* Cyan - accent secondaire */
-    --light-color: #f7f9fc;         /* Blanc très légèrement bleuté */
-    --dark-color: #0f172a;          /* Bleu très foncé presque noir */
-    --text-color: #334155;          /* Gris bleuté pour le texte */
-    --text-light: #64748b;          /* Gris clair pour le texte secondaire */
-    --success-color: #10b981;       /* Vert vibrant */
-    --warning-color: #f59e0b;       /* Orange/Ambre vibrant */
-    --border-color: #e2e8f0;        /* Gris très légèrement bleuté pour bordures */
+    --main-color: #526d7c;       /* Bleu-gris, discret et professionnel */
+    --primary-light: #7a94a1;
+    --custom-color: #90C9CB;       /* Bleu-gris clair */
+    --primary-dark: #3a4f5c;        /* Bleu-gris foncé */
+    --secondary-color: #363b47;     /* Gris foncé presque navy */
+    --accent-color: #a3927b;        /* Taupe/beige foncé élégant */
+    --accent-color-alt: #d5cdc2;    /* Beige très doux */
+    --light-color: #f6f5f3;         /* Blanc cassé très subtil */
+    --dark-color: #282c34;          /* Gris foncé presque noir */
+    --text-color: #505050;          /* Gris foncé pour le texte */
+    --text-light: #808080;          /* Gris moyen pour le texte secondaire */
+    --success-color: #6b796a;       /* Vert grisé très discret */
+    --warning-color: #b9a089;       /* Beige ambré discret */
+    --border-color: #e5e2dd;        /* Gris-beige très clair pour bordures */
     --card-bg: #ffffff;             /* Blanc pur pour les cartes */
     --white: #ffffff;               /* Blanc pur */
-    --highlight-bg: rgba(239, 71, 111, 0.9); /* Couleur pour les éléments highlight */
-    --accent-hover: #ff3e66;        /* Couleur hover pour les éléments accent */
+    --highlight-bg: rgba(163, 146, 123, 0.7); /* Accent semi-transparent */
+    --accent-hover: #8d7d69;        /* Taupe plus foncé pour hover */
     
     /* Effets et espacements */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 6px rgba(54, 59, 71, 0.05);
+    --shadow-lg: 0 8px 20px -5px rgba(54, 59, 71, 0.07), 0 6px 10px -6px rgba(54, 59, 71, 0.03);
+    --shadow-xl: 0 15px 25px -5px rgba(54, 59, 71, 0.06), 0 8px 10px -5px rgba(54, 59, 71, 0.02);
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --section-spacing: 100px;
-    --border-radius-sm: 8px;
-    --border-radius: 12px;
-    --border-radius-lg: 20px;
+    --section-spacing: 80px;
+    --border-radius-sm: 4px;
+    --border-radius: 6px;
+    --border-radius-lg: 8px;
     --border-radius-pill: 9999px;
 }
 
@@ -61,15 +62,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2.section-title::after {
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--main-color), var(--accent-color));
 }
 
 p, .lead {
-    color: var(--text-color);
+    color: var(--white);
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 a:hover {
@@ -77,12 +78,12 @@ a:hover {
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: var(--main-color);
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: var(--custom-color);
     color: var(--white);
 }
 
@@ -97,22 +98,22 @@ a:hover {
 }
 
 .btn-secondary {
-    background: var(--white);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: var(--primary-light);
+    color: var(--white);
+    border: 2px solid var(--main-color);
 }
 
 .btn-secondary:hover {
-    background: var(--light-color);
+    background: var(--accent-color);
 }
 
 .btn-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: var(--primary-dark);
     color: var(--white);
 }
 
 .btn-gradient:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--accent-color));
+    background: var(--accent-color);
     color: var(--white);
 }
 
@@ -156,7 +157,7 @@ a:hover {
 }
 
 .hero-section::before {
-    background: linear-gradient(150deg, rgba(22, 33, 62, 0.9) 30%, rgba(67, 97, 238, 0.8) 100%);
+    background: linear-gradient(150deg, rgba(54, 59, 71, 0.9) 30%, rgba(82, 109, 124, 0.8) 100%);
 }
 
 .hero-section h1 {
@@ -169,11 +170,11 @@ a:hover {
 }
 
 .value-props li {
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .check-icon {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--white);
 }
 
@@ -237,11 +238,11 @@ a:hover {
 }
 
 .service-card::before {
-    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    background: linear-gradient(to bottom, var(--custom-color), var(--accent-color));
 }
 
 .service-icon {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .service-card h3 {
@@ -304,7 +305,7 @@ a:hover {
 }
 
 .testimonial-icon {
-    color: rgba(67, 97, 238, 0.1);
+    color: rgba(82, 109, 124, 0.1);
 }
 
 blockquote {
@@ -335,7 +336,7 @@ blockquote {
 
 .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+    box-shadow: 0 0 0 3px rgba(82, 109, 124, 0.1);
 }
 
 .contact-form {
@@ -349,21 +350,21 @@ blockquote {
 }
 
 .back-to-top {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--white);
 }
 
 .back-to-top:hover {
-    background-color: var(--accent-color);
+    background-color: var(--warning-color);
 }
 
 .site-footer {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
+    background-color: var(--main-color);
+    color: white;
 }
 
 .site-footer::before {
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--accent-color-alt), var(--primary-color));
+    background: linear-gradient(90deg, var(--main-color), var(--accent-color), var(--accent-color-alt), var(--main-color));
 }
 
 .footer-info h3 {
@@ -371,11 +372,19 @@ blockquote {
 }
 
 .footer-info p {
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
+}
+
+.footer-info a {
+    color: white;
+}
+
+.footer-info a:hover {
+    color: var(--accent-color);
 }
 
 .footer-icon {
-    color: var(--accent-color-alt);
+    color: white;
 }
 
 .footer-links h3 {
@@ -383,7 +392,7 @@ blockquote {
 }
 
 .footer-menu-container a {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
 }
 
 .footer-menu-container a:hover {
@@ -400,13 +409,13 @@ blockquote {
 }
 
 .social-icon:hover {
-    background-color: var(--accent-color);
+    background-color: ;
     color: var(--white);
 }
 
 .site-info {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
+    color: white;
 }
 
 .divider {
@@ -430,7 +439,7 @@ blockquote {
 }
 
 .full-image-section::before {
-    background: linear-gradient(45deg, rgba(67, 97, 238, 0.7), rgba(255, 86, 120, 0.7));
+    background: linear-gradient(45deg, var(--accent-color), rgba(163, 146, 123, 0.7));
 }
 
 .full-image-section h2 {
@@ -444,7 +453,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Libre Franklin', 'Segoe UI', sans-serif;
     line-height: 1.7;
     margin: 0;
     padding: 0;
@@ -453,21 +462,21 @@ body {
 
 /* Typographie moderne */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.025em;
+    font-family: 'Libre Baskerville', 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
     line-height: 1.2;
     margin-top: 0;
 }
 
 h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.1;
 }
 
 h2 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -477,6 +486,17 @@ h2.section-title {
     margin-bottom: 3rem;
 }
 
+h2#title-description {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+h3#subtitle-description {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.5;
+}
+
 h2.section-title::after {
     content: '';
     position: absolute;
@@ -484,22 +504,22 @@ h2.section-title::after {
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
-    height: 4px;
+    height: 3px;
     border-radius: var(--border-radius-pill);
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.875rem;
     margin-bottom: 1.25rem;
 }
 
 p {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .lead {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 2rem;
 }
@@ -555,7 +575,7 @@ section {
     line-height: 1.5;
     letter-spacing: 0.025em;
     gap: 0.5rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     text-align: center;
 }
 
@@ -639,8 +659,15 @@ section {
 
 .site-title {
     font-size: 1.625rem;
+    color: var(--accent-color);
     margin: 0;
-    font-weight: 800;
+    font-weight: 600;
+}
+
+a#site-name {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .logo-site {
@@ -976,7 +1003,7 @@ section {
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
 }
 
 .service-icon {
@@ -1157,6 +1184,10 @@ blockquote {
     font-size: 1.2rem;
 }
 
+.contact-text p, a {
+    color: var(--accent-color);
+}
+
 .contact-form {
     padding: 40px;
     border-radius: var(--border-radius);
@@ -1303,6 +1334,10 @@ textarea.form-control {
 .footer-contact h3 {
     margin-bottom: 25px;
     font-size: 1.5rem;
+}
+
+.footer-link {
+    color: white;
 }
 
 .social-links {

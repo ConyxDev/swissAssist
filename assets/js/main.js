@@ -1,168 +1,282 @@
 /**
- * Main JavaScript file for SwissAssist modern theme
+ * LemanAssist - Script principal
+ * Ce fichier contient toutes les fonctions JavaScript du thème
+ * Version optimisée
  */
+
 (function($) {
     'use strict';
 
-    // Document Ready
-    $(document).ready(function() {
+    // Variables globales
+    var $window = $(window),
+        $body = $('body'),
+        $header = $('.site-header'),
+        $navMenu = $('.nav-menu'),
+        $backToTop = $('#back-to-top'),
+        $menuToggle = $('.menu-toggle'),
+        $sections = $('section[id]');
+
+    // Fonction principale d'initialisation
+    function initialize() {
+        // Ajouter la classe one-page-site au body
+        $body.addClass('one-page-site');
         
-        // Mobile Menu Toggle
-        $('.menu-toggle').on('click', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('active');
-            $('.nav-menu').toggleClass('active');
-            $('body').toggleClass('menu-open');
-        });
-
-        // Header scroll effect
-        $(window).on('scroll', function() {
-            if ($(this).scrollTop() > 100) {
-                $('.header-main').addClass('scrolled');
-            } else {
-                $('.header-main').removeClass('scrolled');
-            }
-            
-            // Activate animations when elements come into view
-            activateAnimations();
-        });
-
-        // Smooth Scrolling for Anchor Links
-        $('a[href*="#"]:not([href="#"])').on('click', function() {
-            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    var offset = $('.header-main').outerHeight() + 20;
-                    
-                    // Close mobile menu if open
-                    if ($('.nav-menu').hasClass('active')) {
-                        $('.menu-toggle').removeClass('active');
-                        $('.nav-menu').removeClass('active');
-                        $('body').removeClass('menu-open');
-                    }
-                    
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - offset
-                    }, 800, 'easeInOutExpo');
-                    return false;
-                }
-            }
-        });
-
-        // Back to Top Button
-        var backToTopBtn = $('#back-to-top');
+        // Initialisation des accordéons FAQ
+        initFaqAccordions();
         
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 300) {
-                backToTopBtn.addClass('show');
-            } else {
-                backToTopBtn.removeClass('show');
-            }
-        });
+        // Initialisation de la navigation one-page
+        initOnePageNav();
         
-        backToTopBtn.on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 800, 'easeInOutExpo');
-        });
+        // Initialisation des événements
+        initEvents();
+        
+        // Initialisation du formulaire
+        initContactForm();
+        
+        // Initialiser les animations au scroll
+        initScrollAnimations();
+        
+        // Initialisation des services en deux colonnes
+        initServicesColumns();
+        
+        // Initialisation du contact en deux colonnes
+        initContactColumns();
+        
+        // Déclencher un scroll initial pour définir les états corrects
+        setTimeout(function() {
+            handleScroll();
+            
+            // Initialiser la mise en page responsive
+            handleResponsiveLayout();
+        }, 200);
+    }
 
-        // Active link state on scroll
-        $(window).on('scroll', function() {
-            var scrollPosition = $(this).scrollTop();
-            
-            // Add offset for header height
-            var offset = $('.header-main').outerHeight() + 20;
-            
-            // Check each section
-            $('section[id]').each(function() {
-                var targetTop = $(this).offset().top - offset;
-                var targetBottom = targetTop + $(this).outerHeight();
+    // Initialisation des animations au scroll
+    function initScrollAnimations() {
+        // Utiliser une solution simple basée sur la position de scroll
+        $window.on('scroll', function() {
+            $('.fade-in:not(.show)').each(function() {
+                var $element = $(this);
+                var elementTop = $element.offset().top;
+                var viewportBottom = $window.scrollTop() + $window.height();
                 
-                if (scrollPosition >= targetTop && scrollPosition <= targetBottom) {
-                    $('.nav-menu .menu-item a').removeClass('active');
-                    $('.nav-menu .menu-item a[href="#' + $(this).attr('id') + '"]').addClass('active');
+                if (viewportBottom > elementTop + 100) {
+                    $element.addClass('show');
                 }
             });
         });
+        
+        // Déclencher un scroll pour animer les éléments déjà visibles
+        $window.trigger('scroll');
+    }
 
-        // Form Validation
-        $('.contact-form form').on('submit', function(e) {
-            var formValid = true;
+    // Initialisation des accordéons FAQ
+    function initFaqAccordions() {
+        $('.faq-question').on('click', function() {
+            var $faqItem = $(this).closest('.faq-item');
+            var isActive = $faqItem.hasClass('active');
             
-            $(this).find('[required]').each(function() {
-                if ($(this).val() === '') {
-                    formValid = false;
-                    $(this).addClass('error');
-                    $(this).parent().addClass('has-error');
-                } else {
-                    $(this).removeClass('error');
-                    $(this).parent().removeClass('has-error');
-                }
-            });
+            // Fermer tous les autres items
+            $('.faq-item').removeClass('active');
             
-            if (!formValid) {
+            if (!isActive) {
+                $faqItem.addClass('active');
+            }
+        });
+    }
+
+    // Initialisation de la navigation one-page
+    function initOnePageNav() {
+        // Navigation smooth scroll pour les liens one-page
+        $('a[href^="#"]').on('click', function(e) {
+            var targetId = this.getAttribute('href');
+            
+            // Ne pas traiter les liens vides ou les ancres génériques
+            if (targetId === '#' || targetId === '#/') {
+                return;
+            }
+            
+            var $target = $(targetId);
+            
+            if ($target.length) {
                 e.preventDefault();
                 
-                // Smooth scroll to first error
-                var firstError = $('.error:first');
-                if (firstError.length) {
-                    $('html, body').animate({
-                        scrollTop: firstError.offset().top - 100
-                    }, 500);
+                var headerHeight = $header.outerHeight();
+                
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - headerHeight
+                }, 800);
+                
+                // Fermer le menu mobile si ouvert
+                if ($navMenu.hasClass('active')) {
+                    $navMenu.removeClass('active');
+                    $menuToggle.attr('aria-expanded', 'false');
                 }
                 
-                // Display error message if needed
-                if ($('.form-error-message').length) {
-                    $('.form-error-message').fadeIn();
-                }
+                // Ajouter la classe active au lien
+                $navMenu.find('a').removeClass('active');
+                $(this).addClass('active');
             }
         });
+    }
 
-        // Remove error class on input focus
-        $('.contact-form .form-control').on('focus', function() {
-            $(this).removeClass('error');
-            $(this).parent().removeClass('has-error');
-            $('.form-error-message').fadeOut();
+    // Initialisation du formulaire de contact
+    function initContactForm() {
+        // Validation du formulaire
+        $('.contact-form form').on('submit', function() {
+            var valid = true;
+            var $requiredFields = $(this).find('[required]');
+            
+            $requiredFields.each(function() {
+                if (!$(this).val()) {
+                    valid = false;
+                    $(this).addClass('is-invalid');
+                } else {
+                    $(this).removeClass('is-invalid');
+                }
+            });
+            
+            return valid;
         });
-
-        // Initialize animations
-        activateAnimations();
         
-        // Handle animations on scroll
-        function activateAnimations() {
-            $('.fade-in').each(function() {
-                var elementTop = $(this).offset().top;
-                var elementHeight = $(this).outerHeight();
-                var windowHeight = $(window).height();
-                var scrollY = $(window).scrollTop();
+        // Réinitialiser les erreurs au focus
+        $('.contact-form form input, .contact-form form textarea, .contact-form form select').on('focus', function() {
+            $(this).removeClass('is-invalid');
+        });
+        
+        // Masquer les messages après 5 secondes
+        if ($('.contact-success, .contact-error').length) {
+            setTimeout(function() {
+                $('.contact-success, .contact-error').fadeOut(500);
+            }, 5000);
+        }
+    }
+
+    // Initialisation des services en deux colonnes
+    function initServicesColumns() {
+        // Restructurer la section services si nécessaire
+        if ($('.services-section .row').length) {
+            // Ajouter des classes pour les animations et styles
+            $('.services-section .service-card').each(function(index) {
+                $(this).addClass('service-card-' + (index + 1));
+            });
+        }
+    }
+
+    // Initialisation du contact en deux colonnes
+    function initContactColumns() {
+        // Vérifier si la section contact a déjà la structure en deux colonnes
+        if ($('.contact-wrapper').length) {
+            // S'assurer que les animations fade-in fonctionnent correctement
+            $('.contact-wrapper .fade-in').each(function(index) {
+                $(this).addClass('fade-in-delay-' + index);
+            });
+        }
+    }
+
+    // Initialisation des événements
+    function initEvents() {
+        // Gestion des événements de scroll
+        $window.on('scroll', handleScroll);
+        
+        // Gestion du menu toggle
+        $menuToggle.on('click', toggleMenu);
+        
+        // Gestion du bouton retour en haut
+        $backToTop.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+        });
+        
+        // Gestion du redimensionnement de la fenêtre
+        $window.on('resize', function() {
+            // Réinitialiser le menu mobile sur les grands écrans
+            if ($window.width() > 992 && $navMenu.hasClass('active')) {
+                $navMenu.removeClass('active');
+                $menuToggle.attr('aria-expanded', 'false');
+            }
+            
+            // Réajuster les colonnes en mode responsive
+            handleResponsiveLayout();
+        });
+    }
+
+    // Gestion des mises en page responsives
+    function handleResponsiveLayout() {
+        // Ajuster les services en colonnes pour les écrans mobiles
+        if ($window.width() < 768) {
+            $('.service-card').addClass('mobile-view');
+        } else {
+            $('.service-card').removeClass('mobile-view');
+        }
+        
+        // Ajuster le layout de contact pour les écrans mobiles
+        if ($window.width() < 992) {
+            $('.contact-wrapper').addClass('mobile-view');
+        } else {
+            $('.contact-wrapper').removeClass('mobile-view');
+        }
+    }
+
+    // Gestion des événements de scroll
+    function handleScroll() {
+        var scrollTop = $window.scrollTop();
+        
+        // Fixed header on scroll
+        if (scrollTop > 100) {
+            $header.addClass('scrolled');
+        } else {
+            $header.removeClass('scrolled');
+        }
+        
+        // Back to top button visibility
+        if (scrollTop > 500) {
+            $backToTop.addClass('active');
+        } else {
+            $backToTop.removeClass('active');
+        }
+        
+        // Active menu items on scroll
+        if ($sections.length) {
+            $sections.each(function() {
+                var currentSection = $(this);
                 
-                // When element is 20% visible
-                if (scrollY > (elementTop - windowHeight + elementHeight * 0.2)) {
-                    $(this).addClass('animated');
+                if (!currentSection.length) return;
+                
+                try {
+                    var sectionTop = currentSection.offset().top - $header.outerHeight() - 10;
+                    var sectionBottom = sectionTop + currentSection.outerHeight();
+                    
+                    if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+                        var currentId = currentSection.attr('id');
+                        
+                        if (currentId) {
+                            $navMenu.find('a').removeClass('active');
+                            $navMenu.find('a[href="#' + currentId + '"]').addClass('active');
+                        }
+                    }
+                } catch (e) {
+                    console.error("Erreur lors du traitement de la section :", e);
                 }
             });
         }
-        
-        // Add easing function if not available
-        if (typeof $.easing.easeInOutExpo !== 'function') {
-            $.easing.easeInOutExpo = function(x, t, b, c, d) {
-                if (t == 0) return b;
-                if (t == d) return b + c;
-                if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
-                return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
-            };
-        }
+    }
+
+    // Toggle du menu mobile
+    function toggleMenu() {
+        $navMenu.toggleClass('active');
+        var isExpanded = $menuToggle.attr('aria-expanded') === 'true';
+        $menuToggle.attr('aria-expanded', !isExpanded);
+    }
+
+    // Document ready
+    $(document).ready(function() {
+        // Attendre que tout soit bien chargé avant d'initialiser
+        setTimeout(function() {
+            initialize();
+        }, 200);
     });
 
-    // Window Load
-    $(window).on('load', function() {
-        // Hide Preloader if exists
-        if ($('.preloader').length) {
-            $('.preloader').fadeOut(500);
-        }
-        
-        // Trigger scroll to activate animations immediately
-        $(window).scroll();
-    });
-    
 })(jQuery);
