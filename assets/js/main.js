@@ -313,3 +313,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialiser pour la position de départ
     handleParallax();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionnez le bouton menu toggle et le menu de navigation
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    // Ajoutez un écouteur d'événement pour le clic sur le bouton
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    }
+});

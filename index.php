@@ -23,10 +23,11 @@ get_header();
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <div class="hero-content">
-                        <h1 class="hero-title fade-in">Secrétaire Médicale à Genève</h1>
-                        <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif sur Genève et à distance</h2>
+                        <h1 class="hero-title fade-in">Secrétaire médicale indépendante à Genève</h1>
+                        <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif externalisés sur Genève et en Suisse Romande</h2>
                         
-                        <p class="hero-text fade-in fade-in-delay-2">Une secrétaire expérimentée au service de votre entreprise,<br> spécialisée dans le secrétariat médical.<br><br> Flexibilité – Professionnalisme – Réactivité</p>
+                        <p class="hero-text fade-in fade-in-delay-2">Vous êtes une entreprise, un cabinet médical ou une agence d’intérim à la recherche d’une secrétaire expérimentée à Genève ?<br>
+                        <strong>Gagnez en efficacité, flexibilité et sérénité en externalisant votre secrétariat.</strong></p>
                         
                         <div class="hero-feature-list">
                             <div class="hero-feature-item fade-in fade-in-delay-1">
@@ -35,18 +36,18 @@ get_header();
                             </div>
                             <div class="hero-feature-item fade-in fade-in-delay-2">
                                 <span class="feature-icon"><i class="fas fa-check"></i></span>
-                                <span>À la recherche d’une secrétaire expérimentée pour un remplacement ou une mission temporaire ?<br> Optez pour une solution flexible et immédiate pour assurer la continuité de votre activité !</span>
+                                <span>Besoin urgent d'une secrétaire médicale compétente pour une mission temporaire ou un remplacement à Genève ?</span>
                             </div>
                             <div class="hero-feature-item fade-in fade-in-delay-3">
                                 <span class="feature-icon"><i class="fas fa-check"></i></span>
-                                <span>Vous souhaitez externaliser votre secrétariat médical ?</span>
+                                <span>Vous souhaitez externaliser votre secrétariat médical pour vous recentrer sur votre métier ?</span>
                             </div>
                         </div>
                         
-                        <p class="hero-text fade-in fade-in-delay-3"><strong>➜ Confiez-moi vos tâches administratives et concentrez-vous sur l'essentiel !</strong></p>
+                        <p class="hero-text fade-in fade-in-delay-3"><strong>➜ Confiez-moi votre gestion administrative et concentrez-vous pleinement sur votre activité.</strong></p>
                         
                         <div class="hero-buttons">
-                            <a href="#contact" class="btn btn-accent btn-lg btn-with-icon fade-in fade-in-delay-3">Réserver un appel <i class="fas fa-arrow-right"></i></a>
+                            <a href="#contact" class="btn btn-accent btn-lg btn-with-icon fade-in fade-in-delay-3">Réserver un appel gratuit <i class="fas fa-arrow-right"></i></a>
                             <a href="#services" class="btn btn-outline btn-lg fade-in fade-in-delay-3">Découvrir mes services</a>
                         </div>
                     </div>
@@ -69,8 +70,8 @@ get_header();
         <div class="hero-overlay workspace-overlay"></div>
         <div class="container">
             <div class="full-image-content">
-                <h2>Une organisation efficace pour votre entreprise</h2>
-                <p>Des services de secrétariat adaptés aux besoins des professionnels modernes</p>
+                <h2>Optimisez votre organisation administrative à Genève</h2>
+                <p>Services de secrétariat externalisés adaptés aux besoins des entreprises, indépendants et professionnels de santé en Suisse Romande</p>
             </div>
         </div>
     </section>
@@ -78,14 +79,14 @@ get_header();
     <!-- Section 2: Services - Structure en 2 colonnes -->
     <section id="services" class="services-section">
         <div class="container">
-            <h2 class="section-title">Mes Services Professionnels</h2>
-            <p class="section-subtitle">Des solutions adaptées aux besoins des entrepreneurs, PME et professionnels de santé</p>
+            <h2 class="section-title">Mes services de secrétariat externalisé à Genève</h2>
+            <p class="section-subtitle">Des solutions efficaces et flexibles pour répondre aux exigences des entreprises, agences d'intérim, indépendants et cabinets médicaux</p>
             
             <!-- Structure en 2 colonnes -->
             <div class="row">
                 <!-- Colonne gauche pour les services médicaux et administratifs -->
                 <div class="col-md-6">
-                    <h3 class="service-column-title fade-in">Services médicaux et administratifs</h3>
+                    <h3 class="service-column-title fade-in">Secrétariat Médical et Gestion Administrative</h3>
                     <div class="service-card fade-in">
                         <div class="service-icon">
                             <i class="fas fa-hospital-user"></i>
@@ -93,31 +94,31 @@ get_header();
                         <h3 class="service-title">Secrétariat Médical</h3>
                         <ul class="service-list">
                             <li>Transcription et comptes-rendus médicaux</li>
-                            <li>Gestion de la facturation Tarmed</li>
+                            <li>Facturation médicale Tarmed, gestion LAMal/LAA</li>
                             <li>Prise de rendez-vous patients</li>
-                            <li>Gestion du standard téléphonique</li>
+                            <li>Accueil téléphonique & gestion du standard médical</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-with-icon">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis<i class="fas fa-arrow-right"></i></a>
                     </div>
                     
                     <div class="service-card fade-in fade-in-delay-1">
                         <div class="service-icon">
                             <i class="fas fa-tasks"></i>
                         </div>
-                        <h3 class="service-title">Gestion Administrative</h3>
+                        <h3 class="service-title">Gestion Administrative Générale</h3>
                         <ul class="service-list">
-                            <li>Gestion d'agenda et planification</li>
-                            <li>Traitement des emails et courriers</li>
-                            <li>Mise en page de documents</li>
-                            <li>Organisation et classement</li>
+                            <li>Organisation d'agenda et planification</li>
+                            <li>Gestion des emails, courriers et appels entrants</li>
+                            <li>Mise en forme professionnelle de documents</li>
+                            <li>Organisation et classement documentaire</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-with-icon">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis  <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
                 <!-- Colonne droite pour l'assistanat commercial et la comptabilité -->
                 <div class="col-md-6">
-                    <h3 class="service-column-title fade-in fade-in-delay-1">Services commerciaux et financiers</h3>
+                    <h3 class="service-column-title fade-in fade-in-delay-1">Assistanat Commercial & Comptabilité</h3>
                     <div class="service-card fade-in fade-in-delay-2">
                         <div class="service-icon">
                             <i class="fas fa-headset"></i>
@@ -129,7 +130,7 @@ get_header();
                             <li>Service après-vente externalisé</li>
                             <li>Support administratif aux ventes</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-with-icon">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
                     </div>
                     
                     <div class="service-card fade-in fade-in-delay-3">
@@ -139,17 +140,17 @@ get_header();
                         <h3 class="service-title">Comptabilité & Facturation</h3>
                         <ul class="service-list">
                             <li>Suivi des factures clients/fournisseurs</li>
-                            <li>Relance des paiements</li>
-                            <li>Gestion des créances</li>
-                            <li>Préparation des documents comptables</li>
+                            <li>Relances et gestion des paiements</li>
+                            <li>Traitement administratif des créances</li>
+                            <li>Préparation comptable & documents pour fiduciaires</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-with-icon">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-accent btn-lg">Demander un devis personnalisé</a>
+                <a href="#contact" class="btn btn-accent btn-lg">Réserver votre consultation gratuite</a>
             </div>
         </div>
     </section>
@@ -159,9 +160,9 @@ get_header();
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="full-image-content">
-                <h2>Pourquoi choisir une assistante indépendante?</h2>
-                <p>Flexibilité, économies, expertise professionnelle sans les contraintes d'un contrat de travail.</p>
-                <a href="#contact" class="btn btn-accent btn-lg">Contactez-moi</a>
+                <h2>Pourquoi choisir une secrétaire indépendante à Genève ?</h2>
+                <p>Bénéficiez de flexibilité, économies et d'une expertise professionnelle sans contraintes d’embauche.</p>
+                <a href="#contact" class="btn btn-accent btn-lg">Réservez votre consultation gratuite</a>
             </div>
         </div>
     </section>
@@ -169,39 +170,39 @@ get_header();
     <!-- Section 3: Avantages -->
     <section id="avantages" class="advantages-section">
         <div class="container">
-            <h2 class="section-title">Mon engagement à vos côtés</h2>
+            <h2 class="section-title">Les avantages de votre secrétaire indépendante à Genève</h2>
             
             <div class="advantages-row">
                 <div class="advantage-card fade-in">
                     <div class="advantage-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3 class="advantage-title">Flexibilité totale</h3>
-                    <p class="advantage-text">Payez uniquement pour les heures réellement travaillées, sans engagement sur la durée.</p>
+                    <h3 class="advantage-title">Flexibilité et disponibilité immédiate</h3>
+                    <p class="advantage-text">Profitez d'un service adaptable à vos besoins réels, uniquement aux heures nécessaires, sans engagement de durée.</p>
                 </div>
                 
                 <div class="advantage-card fade-in fade-in-delay-1">
                     <div class="advantage-icon">
                         <i class="fas fa-coins"></i>
                     </div>
-                    <h3 class="advantage-title">Économies garanties</h3>
-                    <p class="advantage-text">Aucune charge sociale, pas de frais fixes liés à un poste permanent.</p>
+                    <h3 class="advantage-title">Maîtrise de votre budget</h3>
+                    <p class="advantage-text">Économisez sur les charges sociales et les frais liés à un poste permanent en externalisant votre secrétariat médical et administratif.</p>
                 </div>
                 
                 <div class="advantage-card fade-in fade-in-delay-2">
                     <div class="advantage-icon">
                         <i class="fas fa-lock"></i>
                     </div>
-                    <h3 class="advantage-title">Confidentialité</h3>
-                    <p class="advantage-text">Travail sécurisé et respect strict de la confidentialité de vos données.</p>
+                    <h3 class="advantage-title">Confidentialité et sécurité garanties</h3>
+                    <p class="advantage-text">Respect absolu de la confidentialité de vos données sensibles et professionnelles grâce à une gestion sécurisée.</p>
                 </div>
                 
                 <div class="advantage-card fade-in fade-in-delay-3">
                     <div class="advantage-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h3 class="advantage-title">Productivité</h3>
-                    <p class="advantage-text">Déléguez vos tâches chronophages et concentrez-vous sur votre expertise.</p>
+                    <h3 class="advantage-title">Gain de productivité</h3>
+                    <p class="advantage-text">Concentrez-vous pleinement sur votre cœur de métier en déléguant efficacement les tâches administratives chronophages.</p>
                 </div>
             </div>
         </div>
@@ -215,13 +216,13 @@ get_header();
     <!-- Section 4: Témoignages -->
     <section id="temoignages" class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">Ils m'ont fait confiance</h2>
+        <h2 class="section-title">Ils m'ont fait confiance à Genève et en Suisse Romande</h2>
             
             <div class="row">
                 <div class="col-md-6">
                     <div class="testimonial-card fade-in">
                         <div class="testimonial-quote">
-                            "Grâce à son efficacité et son professionnalisme, j'ai pu déléguer toute ma gestion administrative et me concentrer sur mon entreprise."
+                        "Grâce à ses compétences en secrétariat médical, j'ai pu déléguer efficacement toute la gestion administrative de mon cabinet, tout en me concentrant pleinement sur mes patients."
                         </div>
                         <div class="testimonial-author">
                             <div class="testimonial-image">
@@ -247,7 +248,7 @@ get_header();
                 <div class="col-md-6">
                     <div class="testimonial-card fade-in fade-in-delay-1">
                         <div class="testimonial-quote">
-                            "Un vrai gain de temps et une grande rigueur dans le suivi des tâches. Je recommande vivement !"
+                        "Un vrai gain de temps et une précision remarquable dans la gestion de mes dossiers administratifs. Je recommande sans hésitation ses services externalisés !"
                         </div>
                         <div class="testimonial-author">
                             <div class="testimonial-image">
@@ -270,7 +271,7 @@ get_header();
                 <div class="col-md-6">
                     <div class="testimonial-card fade-in fade-in-delay-1">
                         <div class="testimonial-quote">
-                            "Un vrai gain de temps et une grande rigueur dans le suivi des tâches. Je recommande vivement !"
+                        "Réactivité, professionnalisme et confidentialité absolue. Un partenariat précieux pour assurer le bon fonctionnement de nos services administratifs."
                         </div>
                         <div class="testimonial-author">
                             <div class="testimonial-image">
@@ -297,31 +298,31 @@ get_header();
     <!-- Section 5: Tarifs -->
     <section id="tarifs" class="pricing-section">
         <div class="container">
-            <h2 class="section-title">Mes tarifs</h2>
-            <p class="section-subtitle">Des formules adaptées à vos besoins, flexibles et sans engagement</p>
+            <h2 class="section-title">Tarifs compétitifs pour votre secrétariat externalisé à Genève</h2>
+            <p class="section-subtitle">Découvrez des formules flexibles, adaptées à votre budget et sans engagement.</p>
             
             <div class="pricing-row">
                 <div class="pricing-card fade-in">
                     <div class="pricing-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3 class="pricing-title">Tarif horaire</h3>
-                    <p class="pricing-description">Idéal pour les missions ponctuelles ou les besoins variables</p>
+                    <h3 class="pricing-title">Tarif Horaire Flexible</h3>
+                    <p class="pricing-description">Solution idéale pour les missions temporaires et les besoins ponctuels.</p>
                     <div class="pricing-price">
-                        40 CHF<span class="pricing-period">/heure</span>
+                        35 CHF<span class="pricing-period">/heure</span>
                     </div>
                     <div class="pricing-features">
                         <div class="pricing-feature feature-included">
                             <i class="fas fa-check"></i> Facturation à l'heure
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Sans engagement
+                            <i class="fas fa-check"></i> Sans engagement de durée
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Réactivité garantie
+                            <i class="fas fa-check"></i> Disponibilité et réactivité garanties
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Minimum 2 heures
+                            <i class="fas fa-check"></i> Minimum de facturation : 2 heures
                         </div>
                     </div>
                     <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
@@ -333,22 +334,22 @@ get_header();
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <h3 class="pricing-title">Forfait 20h</h3>
-                    <p class="pricing-description">Pour les besoins réguliers avec un tarif avantageux</p>
+                    <p class="pricing-description">La formule préférée des PME et indépendants pour une gestion régulière.</p>
                     <div class="pricing-price">
-                        700 CHF<span class="pricing-period">/mois</span>
+                        650 CHF<span class="pricing-period">/mois</span>
                     </div>
                     <div class="pricing-features">
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> 20 heures par mois
+                            <i class="fas fa-check"></i> 20 heures par mois incluses
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> 35 CHF/heure (économie de 12,5%)
+                            <i class="fas fa-check"></i> Tarif avantageux de 32.50 CHF/heure (économie de 7%)
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Report des heures non utilisées
+                            <i class="fas fa-check"></i> Report des heures non utilisées possible
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Engagement mensuel
+                            <i class="fas fa-check"></i> Service prioritaire et réactif
                         </div>
                     </div>
                     <a href="#contact" class="btn btn-accent btn-with-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
@@ -359,22 +360,22 @@ get_header();
                         <i class="fas fa-building"></i>
                     </div>
                     <h3 class="pricing-title">Forfait 40h</h3>
-                    <p class="pricing-description">Solution complète pour les professionnels ayant des besoins importants</p>
+                    <p class="pricing-description">Solution complète pour une gestion intensive avec le meilleur rapport qualité-prix.</p>
                     <div class="pricing-price">
-                        1200 CHF<span class="pricing-period">/mois</span>
+                        1150 CHF<span class="pricing-period">/mois</span>
                     </div>
                     <div class="pricing-features">
                         <div class="pricing-feature feature-included">
                             <i class="fas fa-check"></i> 40 heures par mois
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> 30 CHF/heure (économie de 25%)
+                            <i class="fas fa-check"></i> Tarif préférentiel 28 CHF/heure (économie de 30%)
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Report des heures non utilisées
+                            <i class="fas fa-check"></i> Heures reportables sur le mois suivant
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Service prioritaire
+                            <i class="fas fa-check"></i> Accès prioritaire et support dédié
                         </div>
                     </div>
                     <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
@@ -382,8 +383,8 @@ get_header();
             </div>
             
             <div class="cta-box">
-                <h3 class="cta-title">Besoin d'une solution sur mesure ?</h3>
-                <p class="cta-text">Je propose également des forfaits personnalisés adaptés à vos besoins spécifiques.</p>
+                <h3 class="cta-title">Vous avez des besoins spécifiques ?</h3>
+                <p class="cta-text">Contactez-moi pour créer ensemble une solution personnalisée, parfaitement adaptée à votre activité.</p>
                 <a href="#contact" class="btn btn-outline">Contactez-moi</a>
             </div>
         </div>
@@ -391,71 +392,93 @@ get_header();
     
     <!-- Section 6: À propos -->
     <section id="apropos" class="about-section">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            
-            <div class="row align-items-center">
-<!--                 <div class="col-md-5">
-                    <div class="about-image fade-in">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/portrait.jpg" alt="Portrait de la secrétaire médicale">
+    <div class="container">
+        <h2 class="section-title">À propos de votre secrétaire indépendante à Genève</h2>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-content fade-in fade-in-delay-1">
+                    <p class="lead">Diplômée en secrétariat médical à Genève avec plus de 25 ans d'expérience en gestion administrative et secrétariat de direction, je mets mes compétences organisationnelles et mon expertise au service des entreprises, cabinets médicaux et agences d'intérim.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <!-- Formation et Diplômes -->
+            <div class="col-md-6 mb-4">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                </div> -->
-                
-                <div class="col-md-7">
-                    <div class="about-content fade-in fade-in-delay-1">
-                        <p class="lead">Diplômée en secrétariat médical et forte de plus de 15 ans en tant que secrétaire de direction, je mets mon sens de l'organisation et mon savoir-faire au service de votre entreprise.</p>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h4>Formation</h4>
-                                <p>Diplôme de Secrétaire Médicale - École de Santé de Suisse Romande, ESSR Genève (2024)</p>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="card-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <h4>Langues</h4>
-                                <ul>
-                                    <li>Français - Langue maternelle</li>
-                                    <li>Anglais - Niveau B2</li>
-                                    <li>Italien - Niveau B1</li>
-                                </ul>
-                            </div>
+                    <h4>Formation et Diplômes</h4>
+                    <p>Diplôme de Secrétaire Médicale - École de Santé de Suisse Romande, ESSR Genève</p>
+                </div>
+            </div>
+            
+            <!-- Langues -->
+            <div class="col-md-6 mb-4">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Langues</h4>
+                    <ul>
+                        <li>Français : langue maternelle</li>
+                        <li>Anglais : courant (niveau B2)</li>
+                        <li>Italien : intermédiaire (niveau B1)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <!-- Compétences Bureautiques & Techniques -->
+            <div class="col-md-12 mb-4 mt-4">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>Compétences Bureautiques & Techniques</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <ul>
+                                <li>Microsoft Office 365 (Word, Excel, Outlook avancés)</li>
+                                <li>Dactylographie rapide (270 frappes/minute)</li>
+                                <li>TarMed – Facturation médicale suisse</li>
+                            </ul>
                         </div>
-                        
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <div class="card-icon">
-                                    <i class="fas fa-laptop"></i>
-                                </div>
-                                <h4>Compétences Bureautiques</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li>TarMed</li>
-                                            <li>Microsoft Office 365</li>
-                                            <li>Excel (Niveau avancé)</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li>Word (Niveau avancé)</li>
-                                            <li>Dactylographie rapide (270 fpm)</li>
-                                            <li>Outlook</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-6 mb-4">
+                            <ul>
+                                <li>SAP & Gestion Électronique des Documents (GED)</li>
+                                <li>PowerPoint (présentations professionnelles)</li>
+                                <li>Maîtrise des outils CRM et ERP</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <div class="row">
+            <!-- Valeurs et qualités personnelles -->
+            <div class="col-md-6 mb-4 mt-4">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4>Valeurs et qualités personnelles</h4>
+                    <ul>
+                        <li>Discrétion et respect de la confidentialité</li>
+                        <li>Rigueur, fiabilité et autonomie</li>
+                        <li>Empathie et excellente communication</li>
+                        <li>Résistance au stress et réactivité</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     
     <!-- Section 7: FAQ -->
     <section id="faq" class="faq-section">

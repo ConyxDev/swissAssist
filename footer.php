@@ -45,8 +45,6 @@
                         <ul>
                             <li><a href="#accueil"><i class="fas fa-angle-right"></i> Accueil</a></li>
                             <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
-                            <li><a href="#avantages"><i class="fas fa-angle-right"></i> Avantages</a></li>
-                            <li><a href="#temoignages"><i class="fas fa-angle-right"></i> Témoignages</a></li>
                             <li><a href="#tarifs"><i class="fas fa-angle-right"></i> Tarifs</a></li>
                             <li><a href="#apropos"><i class="fas fa-angle-right"></i> À propos</a></li>
                             <li><a href="#faq"><i class="fas fa-angle-right"></i> FAQ</a></li>
