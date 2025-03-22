@@ -93,7 +93,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 the_custom_logo();
                             else :
                                 ?>
-                                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+<!--                                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1> -->
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/pictures/lemanassist.png" alt="LemanAssist Logo" class="img-flui logo-responsive">
                             <?php endif; ?>
                         </div><!-- .site-branding -->
                     </div>

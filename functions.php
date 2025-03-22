@@ -635,7 +635,7 @@ function lemanassist_get_faqs($count = 6) {
 /**
  * Handle contact form submission
  */
-function lemanassist_handle_contact_form() {
+/* function lemanassist_handle_contact_form() {
     if (!isset($_POST['contact_form_nonce']) || !wp_verify_nonce($_POST['contact_form_nonce'], 'submit_contact_form')) {
         wp_die('La vérification de sécurité a échoué, veuillez réessayer.');
     }
@@ -677,7 +677,7 @@ add_action('admin_post_nopriv_submit_contact_form', 'lemanassist_handle_contact_
 /**
  * Display contact form notice
  */
-function lemanassist_contact_form_notice() {
+/* function lemanassist_contact_form_notice() {
     if (isset($_GET['contact']) && $_GET['contact'] == 'success') {
         ?>
         <div class="contact-success">
@@ -697,9 +697,9 @@ add_action('wp_body_open', 'lemanassist_contact_form_notice');
 /**
  * Check if plugin is active - adding safe wrapper for admin pages
  */
-if (!function_exists('is_plugin_active')) {
+/* if (!function_exists('is_plugin_active')) {
     include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-}
+} */
 
 /**
  * Add admin CSS for custom meta boxes

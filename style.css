@@ -2482,3 +2482,25 @@ textarea.form-control {
         grid-template-columns: 1fr;
     }
 }
+
+
+.logo-responsive {
+    max-width: 100%;
+    height: auto;
+    /* Taille par défaut pour desktop */
+    width: 250px; /* Ajustez selon la taille d'origine de votre logo */
+}
+
+/* Media queries pour les tablettes */
+@media (max-width: 768px) {
+    .logo-responsive {
+        width: 200px; /* Taille réduite pour tablettes */
+    }
+}
+
+/* Media queries pour les mobiles */
+@media (max-width: 576px) {
+    .logo-responsive {
+        width: 150px; /* Taille encore plus réduite pour mobiles */
+    }
+}
