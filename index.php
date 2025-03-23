@@ -23,8 +23,8 @@ get_header();
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <div class="hero-content">
-                        <h1 class="hero-title fade-in">Secrétaire médicale indépendante à Genève</h1>
-                        <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif externalisés sur Genève et en Suisse Romande</h2>
+                        <h1 class="hero-title fade-in">Secrétaire médicale à Genève et Suisse romande</h1>
+                        <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif sur Genève et en Suisse Romande</h2>
                         
                         <p class="hero-text fade-in fade-in-delay-2">Vous êtes une entreprise, un cabinet médical ou une agence d’intérim à la recherche d’une secrétaire expérimentée à Genève ?<br>
                         <strong>Gagnez en efficacité, flexibilité et sérénité en externalisant votre secrétariat.</strong></p>
@@ -487,6 +487,18 @@ get_header();
             
             <div class="faq-container">
                 <div class="faq-item active">
+
+                    <div class="faq-question">
+                        Puis-je faire appel à vos services pour des besoins ponctuels ?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Absolument ! Mes services sont flexibles et s'adaptent à vos besoins, qu'ils soient ponctuels ou réguliers. Vous pouvez faire appel à moi pour un remplacement, une surcharge temporaire de travail, ou un projet spécifique. Le tarif horaire est parfaitement adapté à ce type de missions ponctuelles, avec un minimum de 2 heures facturées. N'hésitez pas à me contacter pour discuter de votre besoin spécifique.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
                     <div class="faq-question">
                         Comment choisir un bon service de secrétariat externalisé ?
                         <i class="fas fa-chevron-down"></i>
@@ -530,18 +542,6 @@ get_header();
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
                             <p>La prise en charge d'un nouveau client commence par une réunion de découverte (en personne ou visioconférence) pour comprendre vos besoins spécifiques. Nous établissons ensemble un cahier des charges précis et je vous propose une solution adaptée. Après signature du contrat, une phase d'intégration permet de me familiariser avec vos outils et processus. Un suivi régulier est ensuite mis en place pour ajuster les prestations si nécessaire.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Puis-je faire appel à vos services pour des besoins ponctuels ?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <p>Absolument ! Mes services sont flexibles et s'adaptent à vos besoins, qu'ils soient ponctuels ou réguliers. Vous pouvez faire appel à moi pour un remplacement, une surcharge temporaire de travail, ou un projet spécifique. Le tarif horaire est parfaitement adapté à ce type de missions ponctuelles, avec un minimum de 2 heures facturées. N'hésitez pas à me contacter pour discuter de votre besoin spécifique.</p>
                         </div>
                     </div>
                 </div>
@@ -602,8 +602,8 @@ get_header();
                     
                     <!-- CTA dans la colonne d'information -->
                     <div class="contact-cta">
-                        <h3>Besoin d'une assistance rapide?</h3>
-                        <p>Appelez directement ou prenez rendez-vous pour un appel vidéo.</p>
+                        <h3>Besoin d'une assistance rapide ?</h3>
+                        <p>Appelez directement.</p>
                         <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>" class="btn btn-outline">Appeler maintenant</a>
                     </div>
                 </div>
