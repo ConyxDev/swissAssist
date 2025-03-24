@@ -27,7 +27,7 @@ get_header();
                         <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif sur Genève et en Suisse Romande</h2>
                         
                         <p class="hero-text fade-in fade-in-delay-2">Vous êtes une entreprise, un cabinet médical ou une agence d’intérim à la recherche d’une secrétaire expérimentée à Genève ?<br>
-                        <strong>Gagnez en efficacité, flexibilité et sérénité en externalisant votre secrétariat.</strong></p>
+                        <strong>Pour une mission courte ou longue, ponctuelle ou régulière, sur place ou à distance, votre secrétaire médicale s’adapte à tous vos besoins.</strong></p>
                         
                         <div class="hero-feature-list">
                             <div class="hero-feature-item fade-in fade-in-delay-1">
