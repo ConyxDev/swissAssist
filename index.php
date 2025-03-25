@@ -23,11 +23,10 @@ get_header();
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <div class="hero-content">
-                        <h1 class="hero-title fade-in">Secrétaire médicale à Genève et Suisse romande</h1>
-                        <h2 class="hero-subtitle fade-in fade-in-delay-1">Services de secrétariat médical et administratif sur Genève et en Suisse Romande</h2>
+                        <h1 class="hero-title fade-in">Secrétaire à Genève et Suisse romande</h1>
+                        <h2 class="hero-subtitle fade-in fade-in-delay-1">Bénéficiez de l’expertise d’une secrétaire médicale et générale pour une organisation optimisée</h2>
                         
-                        <p class="hero-text fade-in fade-in-delay-2">Vous êtes une entreprise, un cabinet médical ou une agence d’intérim à la recherche d’une secrétaire expérimentée à Genève ?<br>
-                        <strong>Pour une mission courte ou longue, ponctuelle ou régulière, sur place ou à distance, votre secrétaire médicale s’adapte à tous vos besoins.</strong></p>
+                        <p class="hero-text fade-in fade-in-delay-2">Que ce soit pour une mission courte ou longue, ponctuelle ou régulière, sur site ou à distance, votre secrétaire s’adapte à vos besoins en secrétariat général et médical.</strong></p>
                         
                         <div class="hero-feature-list">
                             <div class="hero-feature-item fade-in fade-in-delay-1">
@@ -70,8 +69,8 @@ get_header();
         <div class="hero-overlay workspace-overlay"></div>
         <div class="container">
             <div class="full-image-content">
-                <h2>Optimisez votre organisation administrative à Genève</h2>
-                <p>Services de secrétariat externalisés adaptés aux besoins des entreprises, indépendants et professionnels de santé en Suisse Romande</p>
+                <h2>Optimisez votre organisation administrative à Genève et en Suisse Romande</h2>
+                <p>Services de secrétariat adaptés aux besoins des entreprises, indépendants et professionnels de santé en Suisse Romande</p>
             </div>
         </div>
     </section>
@@ -79,7 +78,7 @@ get_header();
     <!-- Section 2: Services - Structure en 2 colonnes -->
     <section id="services" class="services-section">
         <div class="container">
-            <h2 class="section-title">Mes services de secrétariat externalisé à Genève</h2>
+            <h2 class="section-title">Services de secrétariat sur site ou à distance en Suisse romande.</h2>
             <p class="section-subtitle">Des solutions efficaces et flexibles pour répondre aux exigences des entreprises, agences d'intérim, indépendants et cabinets médicaux</p>
             
             <!-- Structure en 2 colonnes -->
@@ -170,7 +169,7 @@ get_header();
     <!-- Section 3: Avantages -->
     <section id="avantages" class="advantages-section">
         <div class="container">
-            <h2 class="section-title">Les avantages de votre secrétaire indépendante à Genève</h2>
+            <h2 class="section-title">Et si vous externalisiez votre secrétariat ?</h2>
             
             <div class="advantages-row">
                 <div class="advantage-card fade-in">
@@ -565,7 +564,7 @@ get_header();
                             </div>
                             <div class="contact-content">
                                 <h4>Adresse</h4>
-                                <p>Genève, Suisse</p>
+                                <p>Cours des Bastions 13, 1205 Genève, Suisse</p>
                             </div>
                         </div>
                         
@@ -595,7 +594,7 @@ get_header();
                             </div>
                             <div class="contact-content">
                                 <h4>Téléphone</h4>
-                                <p><a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>"><?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?></a></p>
+                                <p><a href="tel:<?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?>"><?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?></a></p>
                             </div>
                         </div>
                     </div>
@@ -604,7 +603,7 @@ get_header();
                     <div class="contact-cta">
                         <h3>Besoin d'une assistance rapide ?</h3>
                         <p>Appelez directement.</p>
-                        <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>" class="btn btn-outline">Appeler maintenant</a>
+                        <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?>" class="btn btn-outline">Appeler maintenant</a>
                     </div>
                 </div>
                 <?php echo do_shortcode('[contact-form-7 id="f86ff97" title="Formulaire de contact 1"]');?>

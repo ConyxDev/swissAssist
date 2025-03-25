@@ -46,7 +46,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="header-info">
                             <div class="header-info-item">
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>"><?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?></a>
+                                <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?>"><?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?></a>
                             </div>
                             <div class="header-info-item">
                                 <i class="fa-solid fa-envelope"></i>
@@ -54,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <div class="header-info-item">
                                 <i class="fa-solid fa-location-dot"></i>
-                                Genève, Suisse
+                                Cours des Bastions 13, 1205 Genève, Suisse
                             </div>
                         </div>
                     </div>

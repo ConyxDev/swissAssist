@@ -13,8 +13,8 @@
                     <div class="footer-info">
                         <h3><?php bloginfo( 'name' ); ?></h3>
                         <p>Secrétaire administrative et médicale indépendante à Genève</p>
-                        <p><span class="footer-icon"><i class="fas fa-map-marker-alt"></i></span> Genève, Suisse</p>
-                        <p><span class="footer-icon"><i class="fas fa-phone"></i></span> <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?>"><?php echo get_theme_mod('contact_phone', '+41 XX XXX XX XX'); ?></a></p>
+                        <p><span class="footer-icon"><i class="fas fa-map-marker-alt"></i></span>Cours des Bastions 13, 1205 Genève, Suisse</p>
+                        <p><span class="footer-icon"><i class="fas fa-phone"></i></span> <a href="tel:<?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?>"><?php echo get_theme_mod('contact_phone', '+41 76 298 09 70'); ?></a></p>
                         <p><span class="footer-icon"><i class="fas fa-envelope"></i></span> <a href="mailto:<?php echo antispambot(get_theme_mod('contact_email', 'contact@lemanassist.ch')); ?>"><?php echo antispambot(get_theme_mod('contact_email', 'contact@lemanassist.ch')); ?></a></p>
                     </div>
                     
