@@ -14,7 +14,7 @@ get_header();
         <!-- Vidéo d'arrière-plan -->
         <div class="hero-video-container">
             <video autoplay muted loop playsinline class="hero-video">
-                <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/videoHeader3.mp4" type="video/mp4">
+                <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/test2.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
         </div>
