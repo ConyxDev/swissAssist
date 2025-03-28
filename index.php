@@ -92,10 +92,11 @@ get_header();
                         </div>
                         <h3 class="service-title">Secrétariat Médical</h3>
                         <ul class="service-list">
-                            <li>Transcription et comptes-rendus médicaux</li>
+                            <li>Transcription de comptes-rendus médicaux</li>
                             <li>Facturation médicale Tarmed, gestion LAMal/LAA</li>
                             <li>Prise de rendez-vous patients</li>
                             <li>Accueil téléphonique & gestion du standard médical</li>
+                            <li>Relances et recouvrement</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis<i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -109,7 +110,8 @@ get_header();
                             <li>Organisation d'agenda et planification</li>
                             <li>Gestion des emails, courriers et appels entrants</li>
                             <li>Mise en forme professionnelle de documents</li>
-                            <li>Organisation et classement documentaire</li>
+                            <li>Classement et archivage administratif</li>
+                            <li>Numérisation de vos documents</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis  <i class="fas fa-arrow-right"></i></a>
                     </div>
