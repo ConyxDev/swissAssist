@@ -55,9 +55,9 @@
                 
                 <div class="footer-contact-column">
                     <div class="footer-contact">
-                        <h3>Horaires</h3>
-                        <p>Lundi - Vendredi: 8h - 18h</p>
-                        <p>Samedi - Dimanche: Fermé</p>
+                        <h3>Accueil téléphonique</h3>
+                        <p>Lundi - Vendredi : 8h - 18h</p>
+                        <p>Samedi - Dimanche : Fermé</p>
                     </div>
                     
                     <div class="footer-newsletter">

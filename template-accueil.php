@@ -1,11 +1,8 @@
 <?php
-/**
- * The main template file for the modern one-page version
- *
- * @package lemanassist
- */
-
-get_header();
+/*
+Template Name: Accueil
+*/
+get_header(); 
 ?>
 
 <main id="primary" class="site-main">

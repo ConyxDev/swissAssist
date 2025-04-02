@@ -1,11 +1,8 @@
 <?php
-/**
- * The main template file for the modern one-page version
- *
- * @package lemanassist
- */
-
-get_header();
+/*
+Template Name: Accueil
+*/
+get_header(); 
 ?>
 
 <main id="primary" class="site-main">
@@ -78,7 +75,7 @@ get_header();
     <!-- Section 2: Services - Structure en 2 colonnes -->
     <section id="services" class="services-section">
         <div class="container">
-            <h2 class="section-title">Services de secrétariat sur site ou à distance en Suisse romande</h2>
+            <h2 class="section-title">Services de secrétariat sur site ou à distance en Suisse romande.</h2>
             <p class="section-subtitle">Des solutions efficaces et flexibles pour répondre aux exigences des entreprises, agences d'intérim, indépendants et cabinets médicaux</p>
             
             <!-- Structure en 2 colonnes -->
@@ -93,7 +90,7 @@ get_header();
                         <h3 class="service-title">Secrétariat Médical</h3>
                         <ul class="service-list">
                             <li>Transcription de comptes-rendus médicaux</li>
-						  <li>Facturation médicale Tarmed, gestion LAMal/LAA/LAI</li>
+                            <li>Facturation médicale Tarmed, gestion LAMal/LAA</li>
                             <li>Prise de rendez-vous patients</li>
                             <li>Accueil téléphonique & gestion du standard médical</li>
                             <li>Relances et recouvrement</li>
@@ -109,6 +106,7 @@ get_header();
                         <ul class="service-list">
                             <li>Organisation d'agenda et planification</li>
                             <li>Gestion des emails, courriers et appels entrants</li>
+                            <li>Mise en forme professionnelle de documents</li>
                             <li>Classement et archivage administratif</li>
                             <li>Numérisation de vos documents</li>
                         </ul>
@@ -162,7 +160,7 @@ get_header();
             <div class="full-image-content">
                 <h2>Pourquoi choisir une secrétaire indépendante à Genève ?</h2>
                 <p>Bénéficiez de flexibilité, économies et d'une expertise professionnelle sans contraintes d’embauche.</p>
-                <a href="#contact" class="btn btn-accent btn-lg">Réserver votre consultation gratuite</a>
+                <a href="#contact" class="btn btn-accent btn-lg">Réservez votre consultation gratuite</a>
             </div>
         </div>
     </section>
@@ -309,7 +307,7 @@ get_header();
                     <h3 class="pricing-title">Tarif Horaire Flexible</h3>
                     <p class="pricing-description">Solution idéale pour les missions temporaires et les besoins ponctuels.</p>
                     <div class="pricing-price">
-                        50 CHF<span class="pricing-period">/heure</span>
+                        35 CHF<span class="pricing-period">/heure</span>
                     </div>
                     <div class="pricing-features">
                         <div class="pricing-feature feature-included">
@@ -322,7 +320,7 @@ get_header();
                             <i class="fas fa-check"></i> Disponibilité et réactivité garanties
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Minimum de facturation : 1 heure
+                            <i class="fas fa-check"></i> Minimum de facturation : 2 heures
                         </div>
                     </div>
                     <a href="#contact" class="btn btn-primary btn-with-icon">Demander un devis <i class="fas fa-arrow-right"></i></a>
@@ -336,14 +334,14 @@ get_header();
                     <h3 class="pricing-title">Forfait 20h</h3>
                     <p class="pricing-description">La formule préférée des PME et indépendants pour une gestion régulière.</p>
                     <div class="pricing-price">
-                        900 CHF<span class="pricing-period"></span>
+                        650 CHF<span class="pricing-period">/mois</span>
                     </div>
                     <div class="pricing-features">
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> 20 heures
+                            <i class="fas fa-check"></i> 20 heures par mois incluses
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Tarif avantageux de 45 CHF/heure (économie de 10%)
+                            <i class="fas fa-check"></i> Tarif avantageux de 32.50 CHF/heure (économie de 7%)
                         </div>
                         <div class="pricing-feature feature-included">
                             <i class="fas fa-check"></i> Report des heures non utilisées possible
@@ -362,14 +360,14 @@ get_header();
                     <h3 class="pricing-title">Forfait 40h</h3>
                     <p class="pricing-description">Solution complète pour une gestion intensive avec le meilleur rapport qualité-prix.</p>
                     <div class="pricing-price">
-                        1600 CHF<span class="pricing-period"></span>
+                        1150 CHF<span class="pricing-period">/mois</span>
                     </div>
                     <div class="pricing-features">
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> 40 heures
+                            <i class="fas fa-check"></i> 40 heures par mois
                         </div>
                         <div class="pricing-feature feature-included">
-                            <i class="fas fa-check"></i> Tarif préférentiel 40 CHF/heure (économie de 20%)
+                            <i class="fas fa-check"></i> Tarif préférentiel 28 CHF/heure (économie de 30%)
                         </div>
                         <div class="pricing-feature feature-included">
                             <i class="fas fa-check"></i> Heures reportables sur le mois suivant
@@ -412,7 +410,6 @@ get_header();
                     </div>
                     <h4>Formation et Diplômes</h4>
                     <p>Diplôme de Secrétaire Médicale - École de Santé de Suisse Romande, ESSR Genève</p>
-				  	<p>Brevet technicien supérieur en secrétariat option bilingue anglais</p>
                 </div>
             </div>
             
@@ -450,8 +447,9 @@ get_header();
                         </div>
                         <div class="col-md-6 mb-4">
                             <ul>
-                                <li>Gestion Électronique des Documents (GED)</li>
+                                <li>SAP & Gestion Électronique des Documents (GED)</li>
                                 <li>PowerPoint (présentations professionnelles)</li>
+                                <li>Maîtrise des outils CRM et ERP</li>
                             </ul>
                         </div>
                     </div>
@@ -494,7 +492,7 @@ get_header();
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Absolument ! Mes services sont flexibles et s'adaptent à vos besoins, qu'ils soient ponctuels ou réguliers. Vous pouvez faire appel à moi pour un remplacement, une surcharge temporaire de travail, ou un projet spécifique. Le tarif horaire est parfaitement adapté à ce type de missions ponctuelles, avec un minimum de 1 heure facturée. N'hésitez pas à me contacter pour discuter de votre besoin spécifique.</p>
+                            <p>Absolument ! Mes services sont flexibles et s'adaptent à vos besoins, qu'ils soient ponctuels ou réguliers. Vous pouvez faire appel à moi pour un remplacement, une surcharge temporaire de travail, ou un projet spécifique. Le tarif horaire est parfaitement adapté à ce type de missions ponctuelles, avec un minimum de 2 heures facturées. N'hésitez pas à me contacter pour discuter de votre besoin spécifique.</p>
                         </div>
                     </div>
                 </div>
@@ -541,7 +539,7 @@ get_header();
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>La prise en charge d'un nouveau client commence par une réunion de découverte (en personne) pour comprendre vos besoins spécifiques. Nous établissons ensemble un cahier des charges précis et je vous propose une solution adaptée. Après signature du devis, une phase d'intégration permet de me familiariser avec vos outils et processus. Un suivi régulier est ensuite mis en place pour ajuster les prestations si nécessaire.</p>
+                            <p>La prise en charge d'un nouveau client commence par une réunion de découverte (en personne ou visioconférence) pour comprendre vos besoins spécifiques. Nous établissons ensemble un cahier des charges précis et je vous propose une solution adaptée. Après signature du contrat, une phase d'intégration permet de me familiariser avec vos outils et processus. Un suivi régulier est ensuite mis en place pour ajuster les prestations si nécessaire.</p>
                         </div>
                     </div>
                 </div>
@@ -575,7 +573,7 @@ get_header();
                             </div>
                             <div class="contact-content">
                                 <h4>Accueil téléphonique</h4>
-                                <p>Lundi - Vendredi : 8h - 18h<br>Samedi - Dimanche : Fermé</p>
+                                <p>Lundi - Vendredi: 8h - 18h<br>Samedi - Dimanche: Fermé</p>
                             </div>
                         </div>
                         

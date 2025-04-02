@@ -15,8 +15,8 @@ get_header();
                 <i class="fas fa-exclamation-triangle fa-5x text-warning"></i>
             </div>
             
-            <header class="page-header">
-                <h1 class="page-title">Oups! Page introuvable.</h1>
+            <header class="page-header mt-10">
+               <h1 class="page-title">Oups! Page introuvable.</h1>
             </header>
 
             <div class="page-content">
@@ -33,22 +33,7 @@ get_header();
                     <?php get_search_form(); ?>
                 </div>
                 
-                <div class="recent-posts mt-5">
-                    <h3>Articles récents</h3>
-                    <ul class="list-unstyled">
-                        <?php
-                        $recent_posts = wp_get_recent_posts(array(
-                            'numberposts' => 5,
-                            'post_status' => 'publish'
-                        ));
-                        
-                        foreach ($recent_posts as $recent) {
-                            echo '<li><a href="' . get_permalink($recent['ID']) . '">' . $recent['post_title'] . '</a></li>';
-                        }
-                        wp_reset_query();
-                        ?>
-                    </ul>
-                </div>
+           
             </div>
         </div>
     </div>

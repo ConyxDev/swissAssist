@@ -19,6 +19,11 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+  	<link rel="icon" type="image/png" href="/assets/pictures/favicon-96x96.png" sizes="96x96" />
+  	<link rel="icon" type="image/svg+xml" href="/assets/pictures/favicon.svg" />
+  	<link rel="shortcut icon" href="/assets/pictures/favicon.ico" />
+  	<link rel="apple-touch-icon" sizes="180x180" href="/assets/pictures/apple-touch-icon.png" />
+  	<link rel="manifest" href="/assets/pictures/site.webmanifest" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             else :
                                 ?>
 <!--                                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1> -->
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/pictures/lemanassist.png" alt="LemanAssist Logo" class="img-flui logo-responsive">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/pictures/lemanassist.png" alt="LemanAssist" class="img-flui logo-responsive">
                             <?php endif; ?>
                         </div><!-- .site-branding -->
                     </div>
